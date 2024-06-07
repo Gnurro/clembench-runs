@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for high_frequency_words_clue_no_critic, episode 5 with openchat_3.5-t1.0--openchat_3.5-t1.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are a language wizard who likes to guess words by using the given rules.<br/><br/>Welcome to Wordle! You have six attempts to guess the target word, a valid English word of five lowercase letters (a-z). Please use the tags &quot;guess:&quot; and &quot;explanation:&quot; to provide a concise explanation for each guess.<br/><br/> To help you make an informed guess, you will receive a clue for the word, such as<br/>clue: snowy white.<br/><br/>Here is an example guess based on the clue:<br/>guess: apple<br/>explanation: In the fairy tail Snow White, the girl is killed because she eats a poisoned apple. And the word apple has 5 letters.<br/><br/>After each guess, your answer will be validated, and you will receive feedback indicating which letters are correct (green), which letters are correct but in the wrong position (yellow), and which letters are incorrect (red). This feedback can be useful in determining which letters to include or exclude in your next guess.<br/><br/>For example, the feedback for &quot;apple&quot; might be:<br/>guess_feedback: a&lt;yellow&gt; p&lt;yellow&gt; p&lt;green&gt; l&lt;yellow&gt; e&lt;red&gt;<br/><br/>The explanation should contain details about how both the guess_feedback and clue work together in tandem to formulate a new guess.<br/><br/>Let&#x27;s begin with your first guess.<br/>clue:strength<br/></p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess: energy<br/>explanation: The clue &quot;strength&quot; suggests a word related to power or force. The word &quot;energy&quot; is a valid English word of five letters and is closely related to strength, as energy is often harnessed to create powerful outcomes. Therefore, &quot;energy&quot; is a strong guess for the target word.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;energy&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; suggests a word related to power or force. The word &quot;energy&quot; is a valid English word of five letters and is closely related to strength, as energy is often harnessed to create powerful outcomes. Therefore, &quot;energy&quot; is a strong guess for the target word.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>I apologize for the oversight. Let&#x27;s try again with a different guess.<br/><br/>guess:power<br/>explanation: The clue &quot;strength&quot; again indicates a word related to power. The word &quot;power&quot; is a valid English word with five letters. It is a common synonym for &quot;strength&quot; and is also closely related to the concept of strength. Thus, &quot;power&quot; is a more appropriate guess for the target word that has exactly five letters.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;power&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; again indicates a word related to power. The word &quot;power&quot; is a valid English word with five letters. It is a common synonym for &quot;strength&quot; and is also closely related to the concept of strength. Thus, &quot;power&quot; is a more appropriate guess for the target word that has exactly five letters.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>attempts: 1<br/>target_word = might<br/>target_word_clue = strength<br/>guess: power<br/>guess_feedback: p&lt;red&gt; o&lt;red&gt; w&lt;red&gt; e&lt;red&gt; r&lt;red&gt;</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>guess_feedback: p&lt;red&gt; o&lt;red&gt; w&lt;red&gt; e&lt;red&gt; r&lt;red&gt;</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>It seems that the guess &quot;power&quot; was incorrect. Since all the letters provided in the guess were marked as red, it indicates that none of the letters in the guess match the target word. The guess was made based on the clue &quot;strength,&quot; which suggests a word related to power. Let&#x27;s consider a new guess that is more relevant to the context:<br/><br/>guess:exert<br/>explanation:The clue &quot;strength&quot; suggests a word related to power or force</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;exert&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; suggests a word related to power or force&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>attempts: 2<br/>target_word = might<br/>target_word_clue = strength<br/>guess: exert<br/>guess_feedback: e&lt;red&gt; x&lt;red&gt; e&lt;red&gt; r&lt;red&gt; t&lt;green&gt;</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>guess_feedback: e&lt;red&gt; x&lt;red&gt; e&lt;red&gt; r&lt;red&gt; t&lt;green&gt;</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:extend<br/>explanation:The clue &quot;strength&quot; suggests a word related to power and capacity. The word &quot;extend&quot; is a valid English word with five letters. Although the feedback shows red indications for the first three letters, each of which are repeated, the word &quot;extend&quot; is related to the concept of increasing or expanding one&#x27;s capacity or performance, which can be seen as an extension of strength. Therefore, &quot;extend&quot; is a suitable guess for the target word</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;extend&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; suggests a word related to power and capacity. The word &quot;extend&quot; is a valid English word with five letters. Although the feedback shows red indications for the first three letters, each of which are repeated, the word &quot;extend&quot; is related to the concept of increasing or expanding one\&#x27;s capacity or performance, which can be seen as an extension of strength. Therefore, &quot;extend&quot; is a suitable guess for the target word&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:empire<br/>explanation:The clue &quot;strength&quot; indicates a word related to power and dominance. The word &quot;empire&quot; is a valid English word with five letters. It is a synonym for a powerful and vast ruling body, which symbolizes strength and dominance. Thus, &quot;empire&quot; is a fitting guess for the target word that has exactly five letters.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;empire&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; indicates a word related to power and dominance. The word &quot;empire&quot; is a valid English word with five letters. It is a synonym for a powerful and vast ruling body, which symbolizes strength and dominance. Thus, &quot;empire&quot; is a fitting guess for the target word that has exactly five letters.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:empow<br/>explanation:Given the clue &quot;strength&quot; and the requirement that the word has exactly five letters, &quot;empow&quot; is a partial guess that could potentially be part of the correct word. The word &quot;empow&quot; is a shorter, incorrect form of the word &quot;empower,&quot; which is related to strength and has five letters. While &quot;empow&quot; is not a valid English word, it could be a step towards the correct guess.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;empow&#x27;, &#x27;explanation&#x27;: &#x27;Given the clue &quot;strength&quot; and the requirement that the word has exactly five letters, &quot;empow&quot; is a partial guess that could potentially be part of the correct word. The word &quot;empow&quot; is a shorter, incorrect form of the word &quot;empower,&quot; which is related to strength and has five letters. While &quot;empow&quot; is not a valid English word, it could be a step towards the correct guess.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: NOT_VALID_ENGLISH_WORD while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>your guess is not a valid word for this game. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:empowe<br/>explanation:Considering the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;empowe&quot; is another partial guess that could potentially be part of the correct word. The word &quot;empowe&quot; is a misspelled variant of &quot;empower,&quot; which is related to strength. While &quot;empowe&quot; is not a valid English word, it could be a closer step towards the correct guess.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;empowe&#x27;, &#x27;explanation&#x27;: &#x27;Considering the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;empowe&quot; is another partial guess that could potentially be part of the correct word. The word &quot;empowe&quot; is a misspelled variant of &quot;empower,&quot; which is related to strength. While &quot;empowe&quot; is not a valid English word, it could be a closer step towards the correct guess.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:enpow<br/>explanation:Given the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;enpow&quot; is a partial guess that could potentially be part of the correct word. The word &quot;enpow&quot; is another misspelled variant of &quot;empower.&quot; Although &quot;enpow&quot; is not a valid English word, it could be a step towards the correct guess.<br/><br/>Please note that the feedback may not be accurate for the partial guesses</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;enpow&#x27;, &#x27;explanation&#x27;: &#x27;Given the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;enpow&quot; is a partial guess that could potentially be part of the correct word. The word &quot;enpow&quot; is another misspelled variant of &quot;empower.&quot; Although &quot;enpow&quot; is not a valid English word, it could be a step towards the correct guess.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: NOT_VALID_ENGLISH_WORD while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>your guess is not a valid word for this game. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:restre<br/>explanation:Given the clue &quot;strength,&quot; which suggests a word related to power, and the requirement for a five-letter word, &quot;restre&quot; could be a partial guess that may be part of the correct word. The word &quot;restre&quot; is a misspelled variant of &quot;restrengthen&quot; or &quot;restore.&quot; Although &quot;restre&quot; is not a valid English word, it could be a step towards the correct guess.<br/></p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;restre&#x27;, &#x27;explanation&#x27;: &#x27;Given the clue &quot;strength,&quot; which suggests a word related to power, and the requirement for a five-letter word, &quot;restre&quot; could be a partial guess that may be part of the correct word. The word &quot;restre&quot; is a misspelled variant of &quot;restrengthen&quot; or &quot;restore.&quot; Although &quot;restre&quot; is not a valid English word, it could be a step towards the correct guess.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:restor<br/>explanation:Considering the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;restor&quot; is a partial guess that could potentially be part of the correct word. The word &quot;restor&quot; is a misspelled variant of &quot;restore,&quot; which is related to strength and has five letters. While &quot;restor&quot; is not a valid English word, it could be a closer step towards the correct guess.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;restor&#x27;, &#x27;explanation&#x27;: &#x27;Considering the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;restor&quot; is a partial guess that could potentially be part of the correct word. The word &quot;restor&quot; is a misspelled variant of &quot;restore,&quot; which is related to strength and has five letters. While &quot;restor&quot; is not a valid English word, it could be a closer step towards the correct guess.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:resto<br/>explanation:Given the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;resto&quot; is a partial guess that could potentially be part of the correct word. The word &quot;resto,&quot; although misspelled, is a recognizable part of the word &quot;restore.&quot; Although &quot;resto&quot; is not a valid English word on its own, it could be a step towards the correct guess.<br/></p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;resto&#x27;, &#x27;explanation&#x27;: &#x27;Given the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;resto&quot; is a partial guess that could potentially be part of the correct word. The word &quot;resto,&quot; although misspelled, is a recognizable part of the word &quot;restore.&quot; Although &quot;resto&quot; is not a valid English word on its own, it could be a step towards the correct guess.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>attempts: 3<br/>target_word = might<br/>target_word_clue = strength<br/>guess: resto<br/>guess_feedback: r&lt;red&gt; e&lt;red&gt; s&lt;red&gt; t&lt;yellow&gt; o&lt;red&gt;</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>guess_feedback: r&lt;red&gt; e&lt;red&gt; s&lt;red&gt; t&lt;yellow&gt; o&lt;red&gt;</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:restore<br/>explanation:The clue &quot;strength&quot; suggests a word related to power and capacity. The word &quot;restore&quot; is a misspelled version of the word &quot;restore,&quot; which is a valid English word with five letters. The guessed feedback shows a yellow indication for the letter &quot;t,&quot; which is correct in the word &quot;restore.&quot; Therefore, based on the clue and the guessed feedback, &quot;restore&quot; is the most accurate guess for the target word.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;restore&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; suggests a word related to power and capacity. The word &quot;restore&quot; is a misspelled version of the word &quot;restore,&quot; which is a valid English word with five letters. The guessed feedback shows a yellow indication for the letter &quot;t,&quot; which is correct in the word &quot;restore.&quot; Therefore, based on the clue and the guessed feedback, &quot;restore&quot; is the most accurate guess for the target word.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:restore<br/>explanation:The clue &quot;strength&quot; suggests a word related to power and capacity. The word &quot;restore&quot; is a valid English word with five letters. It is closely related to the concept of regaining or returning something to its previous state, which can be tied to the idea of strength. Although the guessed feedback shows red indications for the last three letters, &quot;restore&quot; is the correct word that matches the requirements given by the clue and the feedback.</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;restore&#x27;, &#x27;explanation&#x27;: &#x27;The clue &quot;strength&quot; suggests a word related to power and capacity. The word &quot;restore&quot; is a valid English word with five letters. It is closely related to the concept of regaining or returning something to its previous state, which can be tied to the idea of strength. Although the guessed feedback shows red indications for the last three letters, &quot;restore&quot; is the correct word that matches the requirements given by the clue and the feedback.&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>the word should have exactly 5 letters. Please try again</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>guess:restor<br/>explanation:Considering the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;restor&quot; is a partial guess that has a strong connection to the correct word. The word &quot;restor&quot; is a misspelled variant of the word &quot;restore,&quot; which is a valid English word with five letters and is closely related to the concept of strengthening or returning something to its previous state. Although &quot;restor&quot; is not a valid</p>
+    </div>
+
+    <div speaker="Game Master: parse" class="msg gm-gm">
+        <p>{&#x27;guess&#x27;: &#x27;restor&#x27;, &#x27;explanation&#x27;: &#x27;Considering the clue &quot;strength&quot; and the requirement for a five-letter word, &quot;restor&quot; is a partial guess that has a strong connection to the correct word. The word &quot;restor&quot; is a misspelled variant of the word &quot;restore,&quot; which is a valid English word with five letters and is closely related to the concept of strengthening or returning something to its previous state. Although &quot;restor&quot; is not a valid&#x27;}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Guesser Error: INVALID_WORD_LENGTH while parsing Player 1&#x27;s (model: openchat_3.5) response</p>
+    </div>
+
+    <div speaker="Game Master: invalid format" class="msg gm-gm">
+        <p>Aborted due to invalid format in response</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>game_result = ABORTED</p>
+    </div>
+
+</div>
+
+</body>
+</html>

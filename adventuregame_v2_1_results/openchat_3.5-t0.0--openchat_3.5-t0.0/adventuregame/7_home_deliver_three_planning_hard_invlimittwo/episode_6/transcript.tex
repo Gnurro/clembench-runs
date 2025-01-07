@@ -35,7 +35,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Write your plan for your next actions on the line below your action, starting with "Next actions:".\\ \tt For example:\\ \tt > open cupboard\\ \tt Next actions: take orange, eat orange\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is: Put the sandwich on the side table, the book on the shelf and the mop in the cupboard.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a kitchen now. There are a cupboard and a counter. The cupboard is closed. There are passages to a living room, a hallway and a pantry here. 
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Write your plan for your next actions on the line below your action, starting with "Next actions:".\\ \tt For example:\\ \tt > open cupboard\\ \tt Next actions: take orange, eat orange\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is: Put the sandwich on the side table, the book on the shelf and the mop in the cupboard.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a kitchen now. There are a cupboard and a counter. The cupboard is closed. There are passages to a pantry, a living room and a hallway here. 
 	  } 
 	   } 
 	   } 
@@ -59,7 +59,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'cupboard1'], ['in', 'plate1', 'cupboard1'], ['at', 'plate1', 'kitchen1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'plate1', 'kitchen1'], ['open', 'cupboard1'], ['in', 'plate1', 'cupboard1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -119,7 +119,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -179,7 +179,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -239,7 +239,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -299,7 +299,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -359,7 +359,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -419,7 +419,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -479,7 +479,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -539,7 +539,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -599,7 +599,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -659,7 +659,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -719,7 +719,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -779,7 +779,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -839,7 +839,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -899,7 +899,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -959,7 +959,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1019,7 +1019,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1079,7 +1079,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1139,7 +1139,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1199,7 +1199,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1259,7 +1259,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1319,7 +1319,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1379,7 +1379,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1439,7 +1439,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1499,7 +1499,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1559,7 +1559,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1619,7 +1619,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1679,7 +1679,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1739,7 +1739,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1799,7 +1799,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1859,7 +1859,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1919,7 +1919,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -1979,7 +1979,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2039,7 +2039,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2099,7 +2099,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2159,7 +2159,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2219,7 +2219,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2279,7 +2279,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2339,7 +2339,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2399,7 +2399,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2459,7 +2459,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2519,7 +2519,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2579,7 +2579,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2639,7 +2639,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2699,7 +2699,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2759,7 +2759,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2819,7 +2819,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2879,7 +2879,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2939,7 +2939,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 
@@ -2999,7 +2999,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'put', 'failed_parameter': 'plate'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'cupboard1', 'kitchen1']], 'known_goal_entities_ratio': 0.16666666666666666}} 
 	  } 
 	   } 
 	   } 

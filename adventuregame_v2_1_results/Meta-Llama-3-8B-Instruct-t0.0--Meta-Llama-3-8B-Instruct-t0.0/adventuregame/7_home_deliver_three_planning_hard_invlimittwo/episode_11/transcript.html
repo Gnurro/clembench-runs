@@ -138,19 +138,39 @@ body {background-color: rgb(157, 152, 150);}
     </div>
 
     <div speaker="Game Master to Player 1" class="msg gm-a">
-        <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Write your plan for your next actions on the line below your action, starting with &quot;Next actions:&quot;.<br/>For example:<br/>&gt; open cupboard<br/>Next actions: take orange, eat orange<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the book on the shelf, the sandwich on the table and the broom on the counter.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a living room now. There are a side table, a couch, a shelf and a chair. There are passages to a hallway, a bedroom and a kitchen here.</p>
+        <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Write your plan for your next actions on the line below your action, starting with &quot;Next actions:&quot;.<br/>For example:<br/>&gt; open cupboard<br/>Next actions: take orange, eat orange<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the book on the shelf, the sandwich on the table and the broom on the counter.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a living room now. There are a couch, a shelf, a side table and a chair. There are passages to a hallway, a kitchen and a bedroom here.</p>
     </div>
 
     <div speaker="Player 1 to Game Master" class="msg a-gm">
-        <p>&gt; look around<br/><br/>Next actions: examine side table, examine shelf</p>
+        <p>&gt; look around<br/><br/>Next actions: examine shelf, examine table, examine counter</p>
+    </div>
+
+    <div speaker="Game Master: turn_plan" class="msg gm-gm">
+        <p>[&#x27;examine shelf&#x27;, &#x27;examine table&#x27;, &#x27;examine counter&#x27;]</p>
     </div>
 
     <div speaker="Game Master: action_fail" class="msg gm-gm">
-        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;look&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;look&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
     </div>
 
     <div speaker="Game Master: goal_status" class="msg gm-gm">
         <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: current_plan" class="msg gm-gm">
+        <p>[&#x27;examine shelf&#x27;, &#x27;examine table&#x27;, &#x27;examine counter&#x27;]</p>
+    </div>
+
+    <div speaker="Game Master: plan_length" class="msg gm-gm">
+        <p>3</p>
+    </div>
+
+    <div speaker="Game Master: plan_results" class="msg gm-gm">
+        <p>[[[], &#x27;There is nothing on the shelf.&#x27;, {&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}], [[], &quot;You can&#x27;t see a table here.&quot;, {&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;entity_not_accessible&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;examine&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;livingroom1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 1}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}]]</p>
+    </div>
+
+    <div speaker="Game Master: plan_command_success_ratio" class="msg gm-gm">
+        <p>0.3333333333333333</p>
     </div>
 
     <div speaker="Game Master: metadata" class="msg gm-gm">
@@ -162,7 +182,7 @@ body {background-color: rgb(157, 152, 150);}
     </div>
 
     <div speaker="Player 1 to Game Master" class="msg a-gm">
-        <p>I apologize for the confusion! I meant to say that I want to take in my surroundings, so I&#x27;ll just say:<br/><br/>&gt; examine room<br/><br/>Next actions: examine side table, examine shelf</p>
+        <p>I apologize for the confusion! I meant to say that I want to take in my surroundings, so I&#x27;ll simply describe what I see:<br/><br/>The living room is cozy and well-lit. There&#x27;s a couch against one wall, with a side table next to it. On the shelf above the couch, I see a few books and some decorative items. The side table has a vase on it, and there&#x27;s a chair in the corner of the room. I also see passages leading to a hallway</p>
     </div>
 
     <div speaker="Game Master: invalid_format" class="msg gm-gm">

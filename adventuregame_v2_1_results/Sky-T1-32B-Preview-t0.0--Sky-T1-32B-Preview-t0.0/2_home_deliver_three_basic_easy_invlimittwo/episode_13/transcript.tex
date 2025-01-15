@@ -1,0 +1,3048 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Only reply with an action.\\ \tt For example:\\ \tt > open cupboard\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is: Put the book on the table, the plate on the table and the mop on the table.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a kitchen now. There are a cupboard, a counter and a plate. The cupboard is closed. The plate is on the counter. There are passages to a pantry and a hallway here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open cupboard<|endoftext|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '<' in the current parser context, at line 1 col 14\n\nopen cupboard<|endoftext|>\n             ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what you mean. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open cupboard\\ \tt \\ \tt I think there might be something useful in there for my task.<|endoftext|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'cupboard1']], 'effective_epistemic_gain_amount': 1, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The cupboard is now open. The cupboard is empty. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to counter\\ \tt \\ \tt Maybe there's something else here that I can use.<|endoftext|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'go', 'failed_parameter': 'counter'}, 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Counter is not a room. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > look at counter\\ \tt \\ \tt I need to see if there's anything else on the counter that could help me with my tasks.<|endoftext|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'look', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 4 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'look' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > examine counter\\ \tt \\ \tt I should check the counter more carefully to see if there are any items or clues that can assist me in completing my objectives. \\ \tt \\ \tt Once I have achieved my goal, I will write "> done" to end the game. \\ \tt \\ \tt My current goal is to put a book, a plate, and a mop on the table. I already see a plate on the counter, so maybe I need to take it to the table. But I also need a book and a mop. Perhaps they 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'examine', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': False, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 5 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 There is a plate on the counter. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take plate\\ \tt \\ \tt Now I have the plate. Next, I need to find a book and a mop to place on the table. \\ \tt \\ \tt I should probably check the pantry or the hallway for these items. \\ \tt \\ \tt First, I'll go to the pantry. \\ \tt \\ \tt > go to pantry\\ \tt \\ \tt Maybe there's a book or a mop in there. \\ \tt \\ \tt If not, I'll try the hallway. \\ \tt \\ \tt Wait, perhaps books are in the cupboard, but it was empty. \\ \tt \\ \tt Maybe the mop is in the 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 6 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You take the plate. In your inventory you have a plate. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to pantry\\ \tt \\ \tt I need to find the book and the mop now. Maybe the pantry has them. \\ \tt \\ \tt If not, perhaps the hallway does. \\ \tt \\ \tt I'll start by checking the pantry. \\ \tt \\ \tt > open pantry door\\ \tt \\ \tt Assuming there is a door to the pantry that needs to be opened. \\ \tt \\ \tt Alternatively, if it's already open, I can just look inside. \\ \tt \\ \tt > look inside pantry\\ \tt \\ \tt Looking for any items that might be useful for my task. \\ \tt \\ \tt I need to find a 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'refrigerator1', 'pantry1'], ['at', 'player1', 'pantry1'], ['exit', 'pantry1', 'kitchen1'], ['closed', 'freezer1'], ['at', 'plate1', 'pantry1'], ['closed', 'refrigerator1'], ['at', 'freezer1', 'pantry1']], 'effective_epistemic_gain_amount': 7, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'pantry1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 7 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a pantry now. There are a freezer and a refrigerator. The freezer is closed. The refrigerator is closed. There is a passage to a kitchen here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open refrigerator\\ \tt \\ \tt Maybe there's a book or a mop inside. \\ \tt \\ \tt If not, I'll check the freezer next. \\ \tt \\ \tt I need to find these items to complete my tasks. \\ \tt \\ \tt Once I have all three items—book, plate, and mop—I can place them on the table. \\ \tt \\ \tt But right now, I only have the plate. \\ \tt \\ \tt I should look around the pantry to see if there are any other items. \\ \tt \\ \tt Perhaps the book is in the refrigerator, or maybe the mop is 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['in', 'apple1', 'refrigerator1'], ['in', 'orange1', 'refrigerator1'], ['in', 'banana1', 'refrigerator1'], ['at', 'peach1', 'pantry1'], ['in', 'sandwich1', 'refrigerator1'], ['open', 'refrigerator1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['in', 'peach1', 'refrigerator1']], 'effective_epistemic_gain_amount': 11, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'plate1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'pantry1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 8 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The refrigerator is now open. In the refrigerator there are a peach, a apple, a sandwich, a orange and a banana. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > close refrigerator\\ \tt \\ \tt None of those items are what I need. \\ \tt \\ \tt Next, I'll check the freezer. \\ \tt \\ \tt > open freezer\\ \tt \\ \tt Maybe the book or the mop is in there. \\ \tt \\ \tt If not, I'll have to look elsewhere. \\ \tt \\ \tt I need to find a book and a mop to place on the table along with the plate I already have. \\ \tt \\ \tt Once I have all three items, I can put them on the table and finish this task. \\ \tt \\ \tt I should also consider if there are any 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'close', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'plate1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'pantry1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 9 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The refrigerator is now closed. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open freezer\\ \tt \\ \tt Let me check if there's anything useful in the freezer. \\ \tt \\ \tt I need to find a book and a mop. \\ \tt \\ \tt Perhaps the book is inside, or maybe the mop is stored there. \\ \tt \\ \tt I should look around carefully. \\ \tt \\ \tt If the freezer is empty, I'll have to go back to the kitchen and see if there are other places to check. \\ \tt \\ \tt Maybe the book is on a shelf or a table somewhere. \\ \tt \\ \tt I need to find it to complete my task. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'freezer1']], 'effective_epistemic_gain_amount': 1, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'plate1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'pantry1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 10 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The freezer is now open. The freezer is empty. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > close freezer\\ \tt \\ \tt Since both the refrigerator and freezer are empty, I should go back to the kitchen and look for other options. \\ \tt \\ \tt Perhaps the book and mop are in the hallway. \\ \tt \\ \tt I'll try going there next. \\ \tt \\ \tt > go to hallway\\ \tt \\ \tt I need to find the book and mop to place on the table. \\ \tt \\ \tt I have the plate already, so finding the other two items is my priority now. \\ \tt \\ \tt Once I have all three, I can proceed to put them on the table and 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'close', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'plate1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'pantry1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 11 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The freezer is now closed. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to hallway\\ \tt \\ \tt I need to see if there's a book or a mop in the hallway. \\ \tt \\ \tt Perhaps there's a closet or another room accessible from here. \\ \tt \\ \tt I should explore to find the necessary items. \\ \tt \\ \tt Once I have the book and mop, I can take them to the table along with the plate I already have. \\ \tt \\ \tt I need to complete this task as efficiently as possible. \\ \tt \\ \tt So, let's see what's in the hallway. \\ \tt \\ \tt > look around hallway\\ \tt \\ \tt Checking for 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'no_exit_to', 'arg': {'failed_action_type': 'go', 'failed_precon_predicate': {'predicate_tuple': ['exit', 'pantry1', 'hallway1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'plate1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'pantry1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 12 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't go to a hallway from here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to kitchen\\ \tt \\ \tt Maybe I need to go back to the kitchen and look for another way to access the hallway. \\ \tt \\ \tt Once there, I can search for the book and mop. \\ \tt \\ \tt I need to find these items to complete my task. \\ \tt \\ \tt Perhaps there's a different path or an object in the kitchen that can lead me to them. \\ \tt \\ \tt I should check again. \\ \tt \\ \tt > examine kitchen\\ \tt \\ \tt Looking for any overlooked details or items that could help me find the book and mop. \\ \tt \\ \tt I have 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1']], 'effective_epistemic_gain_amount': 2, 'known_entities': [['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 13 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a kitchen now. There are a cupboard and a counter. The cupboard is open. There are passages to a pantry and a hallway here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to hallway\\ \tt \\ \tt I need to access the hallway to find the book and mop. \\ \tt \\ \tt Once there, I can look for these items and bring them back to the table. \\ \tt \\ \tt With the plate already in my inventory, I just need to find the book and mop to complete the task. \\ \tt \\ \tt I should proceed to the hallway and see what's there. \\ \tt \\ \tt > look around hallway\\ \tt \\ \tt Upon entering the hallway, I need to check for any items or rooms that might contain the book and mop. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['exit', 'hallway1', 'broomcloset1'], ['exit', 'hallway1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'plate1', 'hallway1'], ['exit', 'hallway1', 'kitchen1'], ['on', 'pottedplant1', 'hallway1floor1'], ['at', 'player1', 'hallway1']], 'effective_epistemic_gain_amount': 7, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'plate1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'player1', 'hallway1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.41379310344827586, 'visited_rooms': ['kitchen1', 'pantry1', 'hallway1'], 'visited_rooms_ratio': 0.5, 'known_goal_entities': [['at', 'plate1', 'hallway1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 14 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a kitchen and a living room here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to broom closet\\ \tt \\ \tt The broom closet might have the mop I'm looking for. \\ \tt \\ \tt Once I have the mop, I can take it to the table along with the plate. \\ \tt \\ \tt I still need to find the book though. \\ \tt \\ \tt After getting the mop, I can look for the book in the living room or elsewhere. \\ \tt \\ \tt First, I'll check the broom closet. \\ \tt \\ \tt > open broom closet\\ \tt \\ \tt Assuming there is a door or entrance to the broom closet that 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'mop1', 'broomcloset1'], ['on', 'mop1', 'broomcloset1floor1'], ['at', 'plate1', 'broomcloset1'], ['exit', 'broomcloset1', 'hallway1'], ['at', 'broom1', 'broomcloset1'], ['on', 'broom1', 'broomcloset1floor1'], ['at', 'player1', 'broomcloset1']], 'effective_epistemic_gain_amount': 7, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'broomcloset1'], ['at', 'plate1', 'broomcloset1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'player1', 'broomcloset1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.4827586206896552, 'visited_rooms': ['kitchen1', 'pantry1', 'broomcloset1', 'hallway1'], 'visited_rooms_ratio': 0.6666666666666666, 'known_goal_entities': [['at', 'mop1', 'broomcloset1'], ['at', 'plate1', 'broomcloset1']], 'known_goal_entities_ratio': 0.5}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 15 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a broom closet now. There are a mop and a broom. The mop is on the floor. The broom is on the floor. There is a passage to a hallway here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take mop\\ \tt \\ \tt Now I have the mop. Next, I need to find a book. \\ \tt \\ \tt I should go back to the hallway and check the living room or any other areas for the book. \\ \tt \\ \tt Once I have the book, I can take it to the table along with the plate and mop. \\ \tt \\ \tt > go to hallway\\ \tt \\ \tt I need to find the book to complete my task. \\ \tt \\ \tt Perhaps the living room has a bookshelf or somewhere a book could be located. \\ \tt \\ \tt I should check there 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'broomcloset1'], ['at', 'plate1', 'broomcloset1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'player1', 'broomcloset1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.4827586206896552, 'visited_rooms': ['kitchen1', 'pantry1', 'broomcloset1', 'hallway1'], 'visited_rooms_ratio': 0.6666666666666666, 'known_goal_entities': [['at', 'mop1', 'broomcloset1'], ['at', 'plate1', 'broomcloset1']], 'known_goal_entities_ratio': 0.5}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 16 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You take the mop. In your inventory you have a plate and a mop. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to living room\\ \tt \\ \tt I need to find a book now. \\ \tt \\ \tt Perhaps there is a bookshelf or a table with a book in the living room. \\ \tt \\ \tt Once I find the book, I can take it to the table along with the plate and mop. \\ \tt \\ \tt I should look around the living room carefully to locate the book. \\ \tt \\ \tt > look around living room\\ \tt \\ \tt Checking for any items that might be useful for my task. \\ \tt \\ \tt I need to find a book to complete the objective. \\ \tt \\ \tt Once 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'no_exit_to', 'arg': {'failed_action_type': 'go', 'failed_precon_predicate': {'predicate_tuple': ['exit', 'broomcloset1', 'livingroom1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'broomcloset1'], ['at', 'plate1', 'broomcloset1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'player1', 'broomcloset1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.4827586206896552, 'visited_rooms': ['kitchen1', 'pantry1', 'broomcloset1', 'hallway1'], 'visited_rooms_ratio': 0.6666666666666666, 'known_goal_entities': [['at', 'mop1', 'broomcloset1'], ['at', 'plate1', 'broomcloset1']], 'known_goal_entities_ratio': 0.5}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 17 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't go to a living room from here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to hallway\\ \tt \\ \tt Maybe I need to go back to the hallway and check for another passage to the living room or another area where the book might be located. \\ \tt \\ \tt I need to find the book to complete my task. \\ \tt \\ \tt Once I have the book, plate, and mop, I can place them on the table. \\ \tt \\ \tt > look around hallway\\ \tt \\ \tt Seeing if there are any other passages or items I may have missed earlier. \\ \tt \\ \tt I need to locate the book to proceed with my task. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'hallway1'], ['at', 'mop1', 'hallway1'], ['at', 'plate1', 'hallway1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'mop1', 'hallway1'], ['at', 'plate1', 'hallway1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'player1', 'hallway1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.4827586206896552, 'visited_rooms': ['kitchen1', 'pantry1', 'broomcloset1', 'hallway1'], 'visited_rooms_ratio': 0.6666666666666666, 'known_goal_entities': [['at', 'mop1', 'hallway1'], ['at', 'plate1', 'hallway1']], 'known_goal_entities_ratio': 0.5}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 18 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a kitchen and a living room here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to living room\\ \tt \\ \tt I need to check the living room for the book. \\ \tt \\ \tt Perhaps there is a bookshelf or a table with a book there. \\ \tt \\ \tt Once I find the book, I can take it to the table along with the plate and mop. \\ \tt \\ \tt I should look around the living room to see if there is a book anywhere. \\ \tt \\ \tt > look around living room\\ \tt \\ \tt Checking for any items that might be useful for my task. \\ \tt \\ \tt I need to find a book to complete the objective 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'couch1', 'livingroom1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1'], ['exit', 'livingroom1', 'bedroom1'], ['at', 'sidetable1', 'livingroom1'], ['on', 'book1', 'sidetable1'], ['exit', 'livingroom1', 'hallway1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'effective_epistemic_gain_amount': 11, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 19 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a living room now. There are a side table, a chair, a shelf, a book and a couch. The book is on the side table. There are passages to a hallway and a bedroom here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book. \\ \tt \\ \tt I already have the plate and the mop in my inventory. \\ \tt \\ \tt Now I need to go to the table and place all three items there. \\ \tt \\ \tt I believe the table is in the kitchen. \\ \tt \\ \tt So, I should go back to the kitchen and find the table to place the book, plate, and mop on it. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can look for the table and complete the task. \\ \tt \\ \tt I need to make 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 20 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop plate\\ \tt \\ \tt I need to manage my inventory. Since I can only carry two items at a time, and I need to have the book, plate, and mop, I should drop the plate for now, pick up the book, and then find a way to carry all three items to the table.\\ \tt \\ \tt Wait, but I need to place all three items on the table. Maybe I can place the plate on the table first, then go back for the other items.\\ \tt \\ \tt Let me try that. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 21 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Since I can only carry two items at a time, and I already have the mop, I need to manage my inventory carefully.\\ \tt \\ \tt First, I'll take the book and see if I can find a way to carry all three items to the table.\\ \tt \\ \tt Alternatively, perhaps I can place the mop on the table first, then come back for the plate and book.\\ \tt \\ \tt Wait, but the table is in the kitchen, and I need to make sure I have all three items together on the 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 22 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt I have the plate and now the book. \\ \tt \\ \tt I should place the plate on the table first. \\ \tt \\ \tt Then, I can come back for the mop and book. \\ \tt \\ \tt But I need to make sure I don't lose track of any items. \\ \tt \\ \tt Perhaps I can place the plate on the table, then return to the living room to get the book, and finally get the mop from the 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 23 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop in my inventory. \\ \tt \\ \tt I need to find a way to get the plate to the table without dropping any items. \\ \tt \\ \tt Perhaps I can place the mop on the floor temporarily, take the plate to the table, then come back for the mop and book. \\ \tt \\ \tt But I need to make sure I don't forget where I placed the mop. \\ \tt \\ \tt Alternatively, maybe there is a way to carry all three items at once, but since my inventory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 24 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 25 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 26 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 27 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 28 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 29 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 30 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 31 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 32 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 33 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 34 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 35 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 36 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 37 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 38 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 39 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 40 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 41 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 42 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 43 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 44 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 45 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 46 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 47 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 48 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop mop\\ \tt \\ \tt I need to manage my inventory since I can only carry two items at a time. \\ \tt \\ \tt Now I have the plate and the book. \\ \tt \\ \tt I should go to the table and place the plate there. \\ \tt \\ \tt Then, I can come back for the mop. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Assuming the table is in the kitchen. \\ \tt \\ \tt Once there, I can place the plate on the table. \\ \tt \\ \tt > place plate on table\\ \tt \\ \tt Now, I need to go back to the living 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 49 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take book\\ \tt \\ \tt Now I have the book and the mop. \\ \tt \\ \tt I need to find a way to get the plate to the table first. \\ \tt \\ \tt Perhaps I can go back to the kitchen, place the plate on the table, and then return for the other items. \\ \tt \\ \tt But since I can only carry two items at a time, I'll have to manage accordingly. \\ \tt \\ \tt First, I'll go back to the kitchen with the plate. \\ \tt \\ \tt > go to kitchen\\ \tt \\ \tt Once there, I can place 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'livingroom1'], ['at', 'sidetable1', 'livingroom1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'broom1', 'broomcloset1'], ['at', 'chair1', 'livingroom1'], ['at', 'shelf1', 'livingroom1'], ['at', 'counter1', 'kitchen1'], ['at', 'freezer1', 'pantry1'], ['at', 'couch1', 'livingroom1'], ['at', 'pottedplant1', 'hallway1'], ['at', 'banana1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'player1', 'livingroom1']], 'known_entities_ratio': 0.6551724137931034, 'visited_rooms': ['hallway1', 'kitchen1', 'livingroom1', 'broomcloset1', 'pantry1'], 'visited_rooms_ratio': 0.8333333333333334, 'known_goal_entities': [['at', 'mop1', 'livingroom1'], ['at', 'plate1', 'livingroom1'], ['at', 'book1', 'livingroom1']], 'known_goal_entities_ratio': 0.75}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn limit 50 reached, end episode. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'game_successfully_finished': False} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

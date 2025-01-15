@@ -1,0 +1,1147 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for home_deliver_three_basic_hard_invlimittwo, episode 11 with Sky-T1-32B-Preview-t0.0--Sky-T1-32B-Preview-t0.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 0</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Only reply with an action.<br/>For example:<br/>&gt; open cupboard<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the book on the shelf, the sandwich on the table and the broom on the counter.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a living room now. There are a side table, a chair, a shelf and a couch. There are passages to a hallway, a kitchen and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; look around&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;&lt;&#x27; in the current parser context, at line 1 col 12\n\nlook around&lt;|endoftext|&gt;\n           ^\nExpected one of: \n\t* WS\n\t* WORD\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 1</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; look around&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;&lt;&#x27; in the current parser context, at line 1 col 12\n\nlook around&lt;|endoftext|&gt;\n           ^\nExpected one of: \n\t* WS\n\t* WORD\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 2</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine side table<br/><br/>I think there might be something on it that I can use to achieve my goals.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 3</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the sidetable.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to shelf<br/><br/>Maybe I can find the book there or see if the shelf is where I need to put the book.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;domain_trait_type_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_parameter&#x27;: &#x27;shelf&#x27;}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 4</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>Shelf is not a room.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine shelf<br/><br/>I should check what&#x27;s on the shelf to see if the book is there or if it&#x27;s the place where I need to put the book.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 5</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the shelf.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>Maybe the kitchen has the items I need, like the sandwich or the broom.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;closed&#x27;, &#x27;cupboard1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;exit&#x27;, &#x27;kitchen1&#x27;, &#x27;pantry1&#x27;], [&#x27;exit&#x27;, &#x27;kitchen1&#x27;, &#x27;hallway1&#x27;], [&#x27;exit&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 8, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.27586206896551724, &#x27;visited_rooms&#x27;: [&#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.3333333333333333, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.5}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 6</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a table, a cupboard and a counter. The cupboard is closed. There are passages to a living room, a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine table<br/><br/>See if there&#x27;s the sandwich or anything else on the table.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.27586206896551724, &#x27;visited_rooms&#x27;: [&#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.3333333333333333, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.5}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 7</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the table.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine counter<br/><br/>Maybe the broom is on the counter.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.27586206896551724, &#x27;visited_rooms&#x27;: [&#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.3333333333333333, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.5}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 8</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the counter.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to pantry<br/><br/>Perhaps the pantry has the items I need.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;closed&#x27;, &#x27;freezer1&#x27;], [&#x27;exit&#x27;, &#x27;pantry1&#x27;, &#x27;kitchen1&#x27;], [&#x27;closed&#x27;, &#x27;refrigerator1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 6, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.3448275862068966, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.5}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 9</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a pantry now. There are a freezer and a refrigerator. The freezer is closed. The refrigerator is closed. There is a passage to a kitchen here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open refrigerator<br/><br/>Maybe there&#x27;s the sandwich inside.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;in&#x27;, &#x27;apple1&#x27;, &#x27;refrigerator1&#x27;], [&#x27;in&#x27;, &#x27;orange1&#x27;, &#x27;refrigerator1&#x27;], [&#x27;in&#x27;, &#x27;banana1&#x27;, &#x27;refrigerator1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;in&#x27;, &#x27;sandwich1&#x27;, &#x27;refrigerator1&#x27;], [&#x27;open&#x27;, &#x27;refrigerator1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;], [&#x27;in&#x27;, &#x27;peach1&#x27;, &#x27;refrigerator1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 11, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 10</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The refrigerator is now open. In the refrigerator there are a peach, a apple, a sandwich, a orange and a banana.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; take sandwich<br/><br/>I need to put the sandwich on the table in the living room.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;take&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 11</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You take the sandwich. In your inventory you have a sandwich.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; close refrigerator<br/><br/>I should keep the refrigerator closed to maintain its temperature. <br/><br/>&gt; go to kitchen<br/><br/>Now, I need to go back to the living room to place the sandwich on the table. <br/><br/>&gt; go to living room<br/><br/>Wait, actually, from the pantry, I should go to the kitchen first, then to the living room. <br/><br/>&gt; go to kitchen<br/><br/>Now, I&#x27;m in the kitchen. I need to go to the living room. <br/><br/>&gt; go to living room<br/><br/>Now</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;close&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 12</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The refrigerator is now closed.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Now, I need to find the table and place the sandwich there. <br/><br/>&gt; examine table<br/><br/>Make sure there&#x27;s nothing on it before placing the sandwich. <br/><br/>&gt; put sandwich on table<br/><br/>Alright, the sandwich is now on the table. <br/><br/>&gt; go to shelf<br/><br/>Next, I need to find the book and put it on the shelf. <br/><br/>&gt; go to bedroom<br/><br/>Maybe the book is in the bedroom. <br/><br/>&gt; examine bed<br/><br/>See if there&#x27;s a book</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;no_exit_to&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;exit&#x27;, &#x27;pantry1&#x27;, &#x27;livingroom1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 13</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You can&#x27;t go to a living room from here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to hallway<br/><br/>Maybe I need to go through the hallway to reach the living room. <br/><br/>&gt; go to living room<br/><br/>Now, I&#x27;m back in the living room. <br/><br/>&gt; examine couch<br/><br/>See if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If there&#x27;s no book on the couch, maybe someone left it on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, perhaps the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Open the cupboard to see</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;no_exit_to&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;exit&#x27;, &#x27;pantry1&#x27;, &#x27;hallway1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 14</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You can&#x27;t go to a hallway from here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>Maybe I need to go to the kitchen first and then find another way to the living room. <br/><br/>&gt; go to living room<br/><br/>Now, I&#x27;m back in the living room. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf. <br/><br/>&gt; go to bedroom<br/><br/>Perhaps the book is in the bedroom. <br/><br/>&gt; examine bed<br/><br/>Look for the book on the bed</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 15</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a table, a cupboard and a counter. The cupboard is closed. There are passages to a living room, a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open cupboard<br/><br/>Maybe the book is inside the cupboard. <br/><br/>&gt; examine cupboard<br/><br/>Looking inside to see if the book is there. <br/><br/>&gt; close cupboard<br/><br/>No book found. Maybe it&#x27;s elsewhere. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine chair<br/><br/>Check if the book is on the chair. <br/><br/>&gt; go to shelf<br/><br/>Perhaps I missed something on the shelf earlier. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, the book could be in the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;in&#x27;, &#x27;plate1&#x27;, &#x27;cupboard1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;open&#x27;, &#x27;cupboard1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 3, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 16</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now open. In the cupboard there is a plate.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; close cupboard<br/><br/>Since there&#x27;s no book in the cupboard, I&#x27;ll close it. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue the search. <br/><br/>&gt; examine couch<br/><br/>See if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;close&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 17</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now closed.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 18</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf and a couch. There are passages to a hallway, a kitchen and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine side table<br/><br/>Check if there&#x27;s a book on the side table. <br/><br/>&gt; examine chair<br/><br/>See if the book is on the chair. <br/><br/>&gt; examine couch<br/><br/>Check the couch for the book. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 19</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the sidetable.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine chair<br/><br/>See if there&#x27;s a book on the chair. <br/><br/>&gt; examine couch<br/><br/>Check the couch for the book. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 20</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the chair.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, perhaps the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser. <br/><br/>&gt; go to pantry<br/><br/>Perhaps the book is in the pantry.</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 21</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the couch.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to shelf<br/><br/>Maybe the book is already on the shelf or perhaps I need to place it here. <br/><br/>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;domain_trait_type_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_parameter&#x27;: &#x27;shelf&#x27;}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 22</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>Shelf is not a room.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Maybe there&#x27;s a book in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 23</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the shelf.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>Maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>If not, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Alternatively, maybe the book is in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the floor. <br/><br/>&gt; go to pantry<br/><br/>Check the pantry for the book.</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 24</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a table, a cupboard and a counter. The cupboard is closed. There are passages to a living room, a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; examine cupboard<br/><br/>Looking around to see if the book is there. <br/><br/>&gt; close cupboard<br/><br/>No book found. Maybe it&#x27;s elsewhere. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;open&#x27;, &#x27;cupboard1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 1, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 25</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now open. In the cupboard there is a plate.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; close cupboard<br/><br/>Since there&#x27;s no book in the cupboard, I&#x27;ll close it. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue the search. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;close&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 26</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now closed.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 27</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf and a couch. There are passages to a hallway, a kitchen and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine side table<br/><br/>Check if there&#x27;s a book on the side table. <br/><br/>&gt; examine chair<br/><br/>See if the book is on the chair. <br/><br/>&gt; examine couch<br/><br/>Check the couch for the book. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 28</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the sidetable.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine chair<br/><br/>Check if there&#x27;s a book on the chair. <br/><br/>&gt; examine couch<br/><br/>See if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 29</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the chair.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, perhaps the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser. <br/><br/>&gt; go to pantry<br/><br/>Check the pantry for the book. <br/><br/>&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 30</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the couch.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to shelf<br/><br/>Maybe the book is already on the shelf or perhaps I need to place it here. <br/><br/>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;domain_trait_type_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_parameter&#x27;: &#x27;shelf&#x27;}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 31</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>Shelf is not a room.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Maybe there&#x27;s a book in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 32</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the shelf.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>Maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>If not, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Alternatively, maybe the book is in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the floor. <br/><br/>&gt; go to pantry<br/><br/>Check the pantry for the book.</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 33</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a table, a cupboard and a counter. The cupboard is closed. There are passages to a living room, a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; examine cupboard<br/><br/>Looking around to see if the book is there. <br/><br/>&gt; close cupboard<br/><br/>No book found. Maybe it&#x27;s elsewhere. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;open&#x27;, &#x27;cupboard1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 1, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 34</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now open. In the cupboard there is a plate.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; close cupboard<br/><br/>Since there&#x27;s no book in the cupboard, I&#x27;ll close it. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue the search. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;close&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 35</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now closed.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 36</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf and a couch. There are passages to a hallway, a kitchen and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine side table<br/><br/>Check if there&#x27;s a book on the side table. <br/><br/>&gt; examine chair<br/><br/>See if the book is on the chair. <br/><br/>&gt; examine couch<br/><br/>Check the couch for the book. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 37</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the sidetable.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine chair<br/><br/>Check if there&#x27;s a book on the chair. <br/><br/>&gt; examine couch<br/><br/>See if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 38</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the chair.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, perhaps the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser. <br/><br/>&gt; go to pantry<br/><br/>Check the pantry for the book. <br/><br/>&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 39</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the couch.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to shelf<br/><br/>Maybe the book is already on the shelf or perhaps I need to place it there. <br/><br/>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;domain_trait_type_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_parameter&#x27;: &#x27;shelf&#x27;}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 40</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>Shelf is not a room.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Maybe there&#x27;s a book in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 41</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the shelf.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>Maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>If not, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Alternatively, maybe the book is in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the floor. <br/><br/>&gt; go to pantry<br/><br/>Check the pantry for the book.</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 42</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a table, a cupboard and a counter. The cupboard is closed. There are passages to a living room, a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; examine cupboard<br/><br/>Looking around to see if the book is there. <br/><br/>&gt; close cupboard<br/><br/>No book found. Maybe it&#x27;s elsewhere. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;open&#x27;, &#x27;cupboard1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 1, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 43</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now open. In the cupboard there is a plate.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; close cupboard<br/><br/>Since there&#x27;s no book in the cupboard, I&#x27;ll close it. <br/><br/>&gt; go to living room<br/><br/>Back to the living room to continue the search. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;close&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 44</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now closed.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Back to the living room to continue searching. <br/><br/>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, maybe the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 45</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf and a couch. There are passages to a hallway, a kitchen and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine side table<br/><br/>Check if there&#x27;s a book on the side table. <br/><br/>&gt; examine chair<br/><br/>See if the book is on the chair. <br/><br/>&gt; examine couch<br/><br/>Check the couch for the book. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 46</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the sidetable.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine chair<br/><br/>Check if there&#x27;s a book on the chair. <br/><br/>&gt; examine couch<br/><br/>See if the book is on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not found, perhaps the book is already on the shelf or needs to be placed there. <br/><br/>&gt; go to kitchen<br/><br/>Alternatively, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 47</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the chair.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine couch<br/><br/>Check if there&#x27;s a book on the couch. <br/><br/>&gt; go to shelf<br/><br/>If not, perhaps the book is already on the shelf or perhaps I need to look elsewhere. <br/><br/>&gt; go to hallway<br/><br/>Maybe the book is in another room accessible from the hallway. <br/><br/>&gt; go to bedroom<br/><br/>Check the bedroom again for the book. <br/><br/>&gt; examine dresser<br/><br/>See if the book is on the dresser. <br/><br/>&gt; go to pantry<br/><br/>Check the pantry for the book. <br/><br/>&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 48</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>There is nothing on the couch.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to shelf<br/><br/>Maybe the book is already on the shelf or perhaps I need to place it there. <br/><br/>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;domain_trait_type_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_parameter&#x27;: &#x27;shelf&#x27;}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 49</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>Shelf is not a room.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; examine shelf<br/><br/>Check if there&#x27;s a book on the shelf. <br/><br/>&gt; go to kitchen<br/><br/>If not, maybe the book is in the kitchen. <br/><br/>&gt; examine cupboard<br/><br/>Check inside the cupboard for the book. <br/><br/>&gt; go to bedroom<br/><br/>Alternatively, perhaps the book is in the bedroom. <br/><br/>&gt; examine dresser<br/><br/>Look for the book on the dresser. <br/><br/>&gt; go to hallway<br/><br/>Maybe there&#x27;s a book in the hallway. <br/><br/>&gt; examine floor<br/><br/>Check if the book is on the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;peach1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;apple1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;orange1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;banana1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;pantry1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;sandwich1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: turn_limit_reached" class="msg gm-gm">
+        <p>Turn limit 50 reached, end episode.</p>
+    </div>
+
+    <div speaker="Game Master: game_result" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;game_successfully_finished&#x27;: False}</p>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,667 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for home_deliver_three_basic_hard_invlimittwo, episode 12 with Sky-T1-32B-Preview-t0.0--Sky-T1-32B-Preview-t0.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 0</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Only reply with an action.<br/>For example:<br/>&gt; open cupboard<br/><br/>You can have up to two objects in your inventory at the same time.<br/><br/>Your goal for this game is: Put the pillow in the freezer, the broom on the bed and the plate on the table.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a kitchen and a living room here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to broom closet&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;&lt;&#x27; in the current parser context, at line 1 col 19\n\ngo to broom closet&lt;|endoftext|&gt;\n                  ^\nExpected one of: \n\t* WS\n\t* WORD\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.06896551724137931, &#x27;visited_rooms&#x27;: [&#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 1</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to broom closet<br/><br/>I think there might be a broom in there that I need for the task.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;on&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1floor1&#x27;], [&#x27;exit&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;on&#x27;, &#x27;broom1&#x27;, &#x27;broomcloset1floor1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;broomcloset1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 6, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;broomcloset1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.13793103448275862, &#x27;visited_rooms&#x27;: [&#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.3333333333333333, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;broomcloset1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 2</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a broom closet now. There are a mop and a broom. The mop is on the floor. The broom is on the floor. There is a passage to a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; take broom<br/><br/>I need the broom for one of the tasks.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;take&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;broomcloset1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.13793103448275862, &#x27;visited_rooms&#x27;: [&#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.3333333333333333, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;broomcloset1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 3</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You take the broom. In your inventory you have a broom.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to hallway<br/><br/>Now that I have the broom, I should figure out where to put it next.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.13793103448275862, &#x27;visited_rooms&#x27;: [&#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.3333333333333333, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;hallway1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 4</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a kitchen and a living room here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>I think the bed is in the living room. I need to put the broom on the bed.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;exit&#x27;, &#x27;livingroom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;on&#x27;, &#x27;book1&#x27;, &#x27;sidetable1&#x27;], [&#x27;exit&#x27;, &#x27;livingroom1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 10, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.3103448275862069, &#x27;visited_rooms&#x27;: [&#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.16666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 5</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf, a book and a couch. The book is on the side table. There are passages to a hallway and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to bedroom<br/><br/>Maybe the bed is in the bedroom instead.&lt;|im_end|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;closed&#x27;, &#x27;wardrobe1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;exit&#x27;, &#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 7, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.41379310344827586, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.5}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 6</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a bedroom now. There are a table, a bed and a wardrobe. The wardrobe is closed. There is a passage to a living room here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; put broom on bed<br/><br/>Alright, I&#x27;ve placed the broom on the bed. Now, I need to find a pillow and put it in the freezer. I wonder where the pillow is. Maybe it&#x27;s on the bed or in the wardrobe. <br/><br/>Wait, the wardrobe is closed. I should check inside. <br/><br/>&gt; open wardrobe<br/><br/>If the pillow isn&#x27;t here, maybe it&#x27;s in another room. <br/><br/>Alternatively, perhaps the pillow is on the couch in the living room.</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;put&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.41379310344827586, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.5}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 1}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 7</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You put the broom on the bed.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open wardrobe<br/><br/>Looking inside to see if there&#x27;s a pillow here. <br/><br/>If not, I&#x27;ll check other rooms. <br/><br/>I need to find a pillow to put in the freezer. <br/><br/>Perhaps the living room or the kitchen has a pillow. <br/><br/>Also, I need to find a plate to put on the table, but I should focus one thing at a time. <br/><br/>First, the pillow. <br/><br/>Alternatively, maybe the pillow is on the couch in the living room. <br/><br/>I should check</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;open&#x27;, &#x27;wardrobe1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;in&#x27;, &#x27;pillow1&#x27;, &#x27;wardrobe1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 3, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4482758620689655, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 8</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The wardrobe is now open. In the wardrobe there is a pillow.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; take pillow<br/><br/>Great, I found the pillow in the wardrobe. Now, I need to put it in the freezer. <br/><br/>I think the freezer is in the kitchen. <br/><br/>So, I should go to the kitchen next. <br/><br/>But wait, I have the broom on the bed already, and now I have the pillow. <br/><br/>I need to make sure I don&#x27;t drop anything. <br/><br/>I can carry two items, but I need to manage them properly. <br/><br/>Maybe I should go directly</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;take&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4482758620689655, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 9</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You take the pillow. In your inventory you have a pillow.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to hallway<br/><br/>I need to go to the kitchen to find the freezer. <br/><br/>I remember there was a passage to the kitchen from the hallway. <br/><br/>I should head there now with the pillow. <br/><br/>I have the pillow in my inventory, and I need to put it in the freezer. <br/><br/>Once that&#x27;s done, I can look for the plate to put on the table. <br/><br/>But I need to make sure I don&#x27;t mix up the tasks. <br/><br/>Put the pillow in the freezer</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;no_exit_to&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;exit&#x27;, &#x27;bedroom1&#x27;, &#x27;hallway1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4482758620689655, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;on&#x27;, &#x27;broom1&#x27;, &#x27;bed1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 10</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You can&#x27;t go to a hallway from here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Maybe from the living room, I can access the kitchen. <br/><br/>I need to find the freezer to put the pillow in it. <br/><br/>Also, I need to make sure I don&#x27;t forget about the plate and the table. <br/><br/>One step at a time. First, get the pillow into the freezer. <br/><br/>Then, find the plate and put it on the table. <br/><br/>I should keep track of my progress. <br/><br/>So, current status: <br/><br/>- Broom is</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4482758620689655, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 11</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf, a book and a couch. The book is on the side table. There are passages to a hallway and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to hallway<br/><br/>I must have made a mistake earlier. Let me try going to the hallway again to access the kitchen.<br/><br/>I need to put the pillow in the freezer, which is likely in the kitchen. <br/><br/>So, heading to the hallway from the living room. <br/><br/>Then, I&#x27;ll proceed to the kitchen. <br/><br/>I have the pillow with me. <br/><br/>I should make sure not to drop it or take any actions that might cause me to lose track of it. <br/><br/>Once in the</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;hallway1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;hallway1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4482758620689655, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;hallway1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.6666666666666666, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;hallway1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 12</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a kitchen and a living room here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>I need to find the freezer to put the pillow in it. <br/><br/>I believe the freezer is in the kitchen. <br/><br/>Once I&#x27;m there, I&#x27;ll look for the freezer and place the pillow inside. <br/><br/>After that, I can proceed to find the plate and put it on the table. <br/><br/>I should stay focused on one task at a time to avoid confusion. <br/><br/>First things first, put the pillow in the freezer. <br/><br/>Then, find the plate and place it</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;closed&#x27;, &#x27;cupboard1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;exit&#x27;, &#x27;kitchen1&#x27;, &#x27;pantry1&#x27;], [&#x27;exit&#x27;, &#x27;kitchen1&#x27;, &#x27;hallway1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 7, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5172413793103449, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.8333333333333334, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 13</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a cupboard and a counter. The cupboard is closed. There are passages to a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open cupboard<br/><br/>I need to find the freezer, but maybe it&#x27;s inside the cupboard. <br/><br/>Alternatively, there might be a refrigerator with a freezer compartment. <br/><br/>I should check both. <br/><br/>If the freezer is not here, perhaps it&#x27;s in the pantry. <br/><br/>I need to look around carefully. <br/><br/>First, opening the cupboard to see if there&#x27;s a freezer inside or if there are any clues about its location. <br/><br/>Also, I have the pillow with me, so I need to make</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;in&#x27;, &#x27;plate1&#x27;, &#x27;cupboard1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;open&#x27;, &#x27;cupboard1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 3, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.8333333333333334, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.8333333333333334}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 14</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The cupboard is now open. In the cupboard there is a plate.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; take plate<br/><br/>I found a plate in the cupboard. Now, I need to put it on the table. <br/><br/>But first, I need to find the freezer to put the pillow in it. <br/><br/>Wait, maybe the freezer is in the pantry. <br/><br/>I should check there next. <br/><br/>Alternatively, perhaps there is a separate freezer in this kitchen. <br/><br/>I need to look around. <br/><br/>But right now, I have both the pillow and the plate. <br/><br/>I can&#x27;t hold more than two</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;take&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.5517241379310345, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.8333333333333334, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.8333333333333334}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 15</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You take the plate. In your inventory you have a pillow and a plate.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to pantry<br/><br/>I need to find the freezer to put the pillow in it. <br/><br/>Maybe the pantry has a freezer. <br/><br/>If not, perhaps I need to look elsewhere. <br/><br/>I should also remember to put the plate on the table once I&#x27;ve taken care of the pillow. <br/><br/>I need to prioritize tasks effectively. <br/><br/>First, find the freezer and put the pillow in it. <br/><br/>Then, find a table to place the plate on. <br/><br/>I should keep track of the locations I</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;exit&#x27;, &#x27;pantry1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;closed&#x27;, &#x27;freezer1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;closed&#x27;, &#x27;refrigerator1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 8, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 16</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a pantry now. There are a freezer and a refrigerator. The freezer is closed. The refrigerator is closed. There is a passage to a kitchen here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; open freezer<br/><br/>I need to put the pillow in here. <br/><br/>Once it&#x27;s inside, I can move on to placing the plate on the table. <br/><br/>I should make sure that the pillow is safely stored in the freezer. <br/><br/>After that, I need to find a table to put the plate on. <br/><br/>I wonder where the table is located. <br/><br/>Possibly in the dining room or perhaps in the kitchen area. <br/><br/>I need to explore the surroundings to locate a table. <br/><br/>But first</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;open&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;open&#x27;, &#x27;freezer1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 1, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 17</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>The freezer is now open. The freezer is empty.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; put pillow in freezer<br/><br/>Alright, the pillow is now in the freezer. <br/><br/>Next, I need to find a table to put the plate on. <br/><br/>I should check the kitchen or maybe the dining room. <br/><br/>I need to look for a table in one of the rooms. <br/><br/>I have the plate in my inventory, so I can proceed to find a suitable place for it. <br/><br/>Let me go back to the kitchen and see if there&#x27;s a table there. <br/><br/>If not, perhaps</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;put&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;turn_goal_score&#x27;: 1}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 18</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You put the pillow in the freezer.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to kitchen<br/><br/>I need to find a table to put the plate on. <br/><br/>I think there might be a table in the kitchen or possibly in another room like a dining room. <br/><br/>I should check the kitchen first. <br/><br/>If there is no table here, I&#x27;ll need to explore further. <br/><br/>I have the plate in my inventory, so I can carry it with me as I look for the table. <br/><br/>Once I find the table, I&#x27;ll place the plate on it and then</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 19</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a kitchen now. There are a cupboard and a counter. The cupboard is open. There are passages to a pantry and a hallway here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; look for table<br/><br/>I need to find a table to put the plate on. <br/><br/>It might be in this kitchen, or perhaps in another room. <br/><br/>I should check the dining room or any other areas that might have a table. <br/><br/>I have the plate in my inventory, so I can carry it with me as I search. <br/><br/>After placing the plate on the table, I should double-check if there are any other tasks I need to accomplish. <br/><br/>I believe that was the last task</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;look&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;on&#x27;, &#x27;broom1&#x27;, &#x27;bed1&#x27;], [&#x27;in&#x27;, &#x27;pillow1&#x27;, &#x27;freezer1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 20</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>I don&#x27;t know how to interpret this &#x27;look&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to dining room<br/><br/>Maybe the table is in the dining room. <br/><br/>I need to find a table to put the plate on. <br/><br/>If there is a dining room, that&#x27;s likely where the table would be. <br/><br/>I should check there next. <br/><br/>Once I find the table, I can place the plate on it and then consider if there are any other tasks I need to complete. <br/><br/>I think that was the last task: put the pillow in the freezer, the broom on</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_repr_str&#x27;, &#x27;arg&#x27;: &#x27;dining room&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;on&#x27;, &#x27;broom1&#x27;, &#x27;bed1&#x27;], [&#x27;in&#x27;, &#x27;pillow1&#x27;, &#x27;freezer1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 21</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>I don&#x27;t know what &#x27;dining room&#x27; means.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>Maybe the table is in the living room. <br/><br/>I need to find a table to put the plate on. <br/><br/>If there isn&#x27;t a dining room, perhaps the living room has a table. <br/><br/>I should check there next. <br/><br/>I have the plate in my inventory, so I can carry it with me as I look for the table. <br/><br/>Once I find the table, I&#x27;ll place the plate on it and then consider if there are any other tasks I need</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;no_exit_to&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;go&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;exit&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;on&#x27;, &#x27;broom1&#x27;, &#x27;bed1&#x27;], [&#x27;in&#x27;, &#x27;pillow1&#x27;, &#x27;freezer1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 22</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You can&#x27;t go to a living room from here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to hallway<br/><br/>Maybe the dining room is accessible from the hallway. <br/><br/>I need to find a table to put the plate on. <br/><br/>I should check the rooms connected to the hallway for a table. <br/><br/>I have the plate in my inventory, so I can carry it with me as I look for the table. <br/><br/>Once I find the table, I&#x27;ll place the plate on it and then consider if there are any other tasks I need to complete. <br/><br/>I think that was the last</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;hallway1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 23</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a hallway now. There is a potted plant. The potted plant is on the floor. There are passages to a broom closet, a kitchen and a living room here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; go to living room<br/><br/>I need to find a table to put the plate on. <br/><br/>Perhaps the living room has a table. <br/><br/>If not, maybe the bedroom does. <br/><br/>I should check the living room first. <br/><br/>I have the plate in my inventory, so I can carry it with me as I look for the table. <br/><br/>Once I find the table, I&#x27;ll place the plate on it and then consider if there are any other tasks I need to complete. <br/><br/>I believe that</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 2, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 24</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You are in a living room now. There are a side table, a chair, a shelf, a book and a couch. The book is on the side table. There are passages to a hallway and a bedroom here.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; put plate on side table<br/><br/>I&#x27;ll place the plate on the side table since it&#x27;s available here. <br/><br/>I think that completes all the tasks: <br/><br/>- Pillow in the freezer <br/><br/>- Broom on the bed <br/><br/>- Plate on the table <br/><br/>Now, I can consider the mission accomplished. <br/><br/>&gt; done <br/><br/>I&#x27;ve completed all the required tasks. <br/><br/>**Final Action:** &gt; done&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;put&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm">
+        <p>Turn 25</p>
+    </div>
+
+    <div speaker="Game Master to Player 1" class="msg gm-a">
+        <p>You put the plate on the side table.</p>
+    </div>
+
+    <div speaker="Player 1 to Game Master" class="msg a-gm">
+        <p>&gt; done<br/><br/>I&#x27;ve completed all the required tasks.&lt;|endoftext|&gt;</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm">
+        <p>{&#x27;action_type&#x27;: &#x27;done&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;couch1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;cupboard1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;refrigerator1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;counter1&#x27;, &#x27;kitchen1&#x27;], [&#x27;at&#x27;, &#x27;mop1&#x27;, &#x27;broomcloset1&#x27;], [&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;sidetable1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;pottedplant1&#x27;, &#x27;hallway1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;chair1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;shelf1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6206896551724138, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;, &#x27;hallway1&#x27;, &#x27;kitchen1&#x27;, &#x27;livingroom1&#x27;, &#x27;broomcloset1&#x27;, &#x27;pantry1&#x27;], &#x27;visited_rooms_ratio&#x27;: 1.0, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;bed1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;plate1&#x27;, &#x27;livingroom1&#x27;], [&#x27;at&#x27;, &#x27;broom1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;pantry1&#x27;], [&#x27;at&#x27;, &#x27;table1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;freezer1&#x27;, &#x27;pantry1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 1.0}, &#x27;done_action&#x27;: True}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: model_done" class="msg gm-gm">
+        <p>Model produced DONE action at turn 26, end episode.</p>
+    </div>
+
+    <div speaker="Game Master: game_result" class="msg gm-gm">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;on(broom1,bed1)&#x27;, &#x27;in(pillow1,freezer1)&#x27;], &#x27;game_successfully_finished&#x27;: False}</p>
+    </div>
+
+</div>
+
+</body>
+</html>

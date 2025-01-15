@@ -1,0 +1,4176 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Write your plan for your next actions on the line below your action, starting with "Next actions:".\\ \tt For example:\\ \tt > open cupboard\\ \tt Next actions: take orange, eat orange\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is: Put the pillow on the table, the book on the table and the plate on the table.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a kitchen now. There are a cupboard, a counter and a plate. The cupboard is closed. The plate is on the counter. There are passages to a pantry and a hallway here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open cupboard  \\ \tt Next actions: check what's inside, look for the pillow or book.<|endoftext|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ["check what's inside", 'look for the pillow or book.<|endoftext|>'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'cupboard1']], 'effective_epistemic_gain_amount': 1, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ["check what's inside", 'look for the pillow or book.<|endoftext|>'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches ''' in the current parser context, at line 1 col 11\n\ncheck what's inside\n          ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The cupboard is now open. The cupboard is empty. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > close cupboard  \\ \tt Next actions: go to the pantry, maybe there's something there.  \\ \tt > go to pantry  \\ \tt Next actions: look around the pantry for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if nothing is found, go to the hallway.  \\ \tt > go to hallway  \\ \tt Next actions: check the hallway for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still nothing, perhaps check the living room or another area.  \\ \tt > go to living room 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['go to the pantry', "maybe there's something there.  \n> go to pantry"] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'close', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'known_entities_ratio': 0.13793103448275862, 'visited_rooms': ['kitchen1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['go to the pantry', "maybe there's something there.  \n> go to pantry"] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], 'You are in a pantry now. There are a freezer and a refrigerator. The freezer is closed. The refrigerator is closed. There is a passage to a kitchen here.', {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'refrigerator1', 'pantry1'], ['at', 'player1', 'pantry1'], ['closed', 'freezer1'], ['exit', 'pantry1', 'kitchen1'], ['closed', 'refrigerator1'], ['at', 'freezer1', 'pantry1']], 'effective_epistemic_gain_amount': 6, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}], [[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches ''' in the current parser context, at line 1 col 12\n\nmaybe there's something there.  \n           ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.5 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The cupboard is now closed. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to pantry  \\ \tt Next actions: check if there is a pillow or book in the pantry.  \\ \tt > look around  \\ \tt Next actions: if not found, proceed to the hallway.  \\ \tt > go to hallway  \\ \tt Next actions: search the hallway for the required items.  \\ \tt > look around  \\ \tt Next actions: if nothing is found, consider checking other rooms like the bedroom or living room.  \\ \tt > go to bedroom  \\ \tt Next actions: look for the pillow or book in the bedroom.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check if there is a pillow or book in the pantry.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check if there is a pillow or book in the pantry.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 49\n\n there is a pillow or book in the pantry.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a pantry now. There are a freezer and a refrigerator. The freezer is closed. The refrigerator is closed. There is a passage to a kitchen here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open freezer  \\ \tt Next actions: check if there is anything inside, maybe the pillow or book is there.  \\ \tt > look inside freezer  \\ \tt Next actions: if nothing is found, close the freezer and check the refrigerator.  \\ \tt > close freezer  \\ \tt Next actions: open the refrigerator and see if the book or pillow is inside.  \\ \tt > open refrigerator  \\ \tt Next actions: look inside the refrigerator for the items needed.  \\ \tt > look inside refrigerator  \\ \tt Next actions: if not found, close the refrigerator and consider 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check if there is anything inside', 'maybe the pillow or book is there.  \n> look inside freezer'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'freezer1']], 'effective_epistemic_gain_amount': 1, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check if there is anything inside', 'maybe the pillow or book is there.  \n> look inside freezer'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know how to interpret this 'check' action.", {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'check', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 4 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The freezer is now open. The freezer is empty. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > close freezer  \\ \tt Next actions: open the refrigerator and check inside.  \\ \tt > open refrigerator  \\ \tt Next actions: look inside the refrigerator for any items.  \\ \tt > look inside refrigerator  \\ \tt Next actions: if nothing is found, close the refrigerator and go back to the kitchen.  \\ \tt > close refrigerator  \\ \tt Next actions: go back to the kitchen to explore other areas.  \\ \tt > go to kitchen  \\ \tt Next actions: check the counter or other objects for the items needed.  \\ \tt > look at counter  \\ \tt Next actions 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['open the refrigerator and check inside.  \n> open refrigerator'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'close', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['open the refrigerator and check inside.  \n> open refrigerator'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 39\n\nopen the refrigerator and check inside.  \n                                      ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'refrigerator1', 'pantry1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.20689655172413793, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 5 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The freezer is now closed. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > open refrigerator  \\ \tt Next actions: check inside the refrigerator for any items that might be useful.  \\ \tt > look inside refrigerator  \\ \tt Next actions: if nothing is found, close the refrigerator and try another location.  \\ \tt > close refrigerator  \\ \tt Next actions: go back to the kitchen and see if there are other places to check.  \\ \tt > go to kitchen  \\ \tt Next actions: look around the kitchen for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the living room 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check inside the refrigerator for any items that might be useful.  \n> look inside refrigerator'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['in', 'apple1', 'refrigerator1'], ['in', 'orange1', 'refrigerator1'], ['in', 'banana1', 'refrigerator1'], ['at', 'peach1', 'pantry1'], ['in', 'sandwich1', 'refrigerator1'], ['open', 'refrigerator1'], ['at', 'banana1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['in', 'peach1', 'refrigerator1']], 'effective_epistemic_gain_amount': 11, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check inside the refrigerator for any items that might be useful.  \n> look inside refrigerator'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 65\n\nrator for any items that might be useful.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 6 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The refrigerator is now open. In the refrigerator there are a peach, a apple, a sandwich, a orange and a banana. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > close refrigerator  \\ \tt Next actions: none of those items are what I need. I should check another room.  \\ \tt > go to hallway  \\ \tt Next actions: look around the hallway for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the living room or bedrooms.  \\ \tt > go to living room  \\ \tt Next actions: search the living room for the required items.  \\ \tt > look around  \\ \tt Next actions: if still nothing, maybe check the bedrooms.  \\ \tt > go 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['none of those items are what I need. I should check another room.  \n> go to hallway'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'close', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['none of those items are what I need. I should check another room.  \n> go to hallway'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 36\n\nnone of those items are what i need. i should check another room.  \n                                   ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 7 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The refrigerator is now closed. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to hallway  \\ \tt Next actions: look around the hallway for any leads on where the pillow or book might be.  \\ \tt > look around  \\ \tt Next actions: if not found, proceed to the living room.  \\ \tt > go to living room  \\ \tt Next actions: search the living room for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, check the bedrooms.  \\ \tt > go to bedroom  \\ \tt Next actions: look for the pillow or book in the bedroom.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['look around the hallway for any leads on where the pillow or book might be.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'no_exit_to', 'arg': {'failed_action_type': 'go', 'failed_precon_predicate': {'predicate_tuple': ['exit', 'pantry1', 'hallway1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['look around the hallway for any leads on where the pillow or book might be.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 75\n\nads on where the pillow or book might be.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 8 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't go to a hallway from here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to living room  \\ \tt Next actions: check the living room for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, consider checking other rooms like the bedroom.  \\ \tt > go to bedroom  \\ \tt Next actions: look for the pillow or book in the bedroom.  \\ \tt > look around  \\ \tt Next actions: if still not found, perhaps check the bathroom or other areas.  \\ \tt > go to bathroom  \\ \tt Next actions: search the bathroom for any signs of the pillow or book. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the living room for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'no_exit_to', 'arg': {'failed_action_type': 'go', 'failed_precon_predicate': {'predicate_tuple': ['exit', 'pantry1', 'livingroom1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the living room for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 45\n\nk the living room for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 9 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't go to a living room from here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to bedroom  \\ \tt Next actions: check the bedroom for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, consider checking the bathroom or another room.  \\ \tt > go to bathroom  \\ \tt Next actions: search the bathroom for any clues or items.  \\ \tt > look around  \\ \tt Next actions: if nothing is found, perhaps return to the kitchen and check again.  \\ \tt > go to kitchen  \\ \tt Next actions: look around the kitchen once more for any missed items.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the bedroom for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'no_exit_to', 'arg': {'failed_action_type': 'go', 'failed_precon_predicate': {'predicate_tuple': ['exit', 'pantry1', 'bedroom1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the bedroom for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 41\n\ncheck the bedroom for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 10 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't go to a bedroom from here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to bathroom  \\ \tt Next actions: check the bathroom for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the dining room or another area.  \\ \tt > go to dining room  \\ \tt Next actions: search the dining room for the required items.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the study or office.  \\ \tt > go to study  \\ \tt Next actions: look for the pillow or book in the study. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the bathroom for any signs of the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'bathroom', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the bathroom for any signs of the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 55\n\nroom for any signs of the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 11 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'bathroom' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to dining room  \\ \tt Next actions: check the dining room for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the study or another room.  \\ \tt > go to study  \\ \tt Next actions: search the study for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the garage or outdoor areas.  \\ \tt > go to garage  \\ \tt Next actions: look around the garage for the pillow or book.  \\ \tt > 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the dining room for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'dining room', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the dining room for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 45\n\nk the dining room for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 12 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'dining room' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to study  \\ \tt Next actions: check the study for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the garage or another room.  \\ \tt > go to garage  \\ \tt Next actions: search the garage for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the backyard or another area.  \\ \tt > go to backyard  \\ \tt Next actions: look around the backyard for the required items.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the study for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'study', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the study for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 39\n\ncheck the study for the pillow or book.  \n                                      ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 13 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'study' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to garage  \\ \tt Next actions: check the garage for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the porch or another area.  \\ \tt > go to porch  \\ \tt Next actions: search the porch for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the attic or basement.  \\ \tt > go to attic  \\ \tt Next actions: look around the attic for the pillow or book.  \\ \tt > look around 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the garage for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'garage', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the garage for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 40\n\ncheck the garage for the pillow or book.  \n                                       ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 14 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'garage' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to porch  \\ \tt Next actions: check the porch for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the attic or another area.  \\ \tt > go to attic  \\ \tt Next actions: search the attic for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the basement.  \\ \tt > go to basement  \\ \tt Next actions: look around the basement for the required items.  \\ \tt > look around  \\ \tt Next 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the porch for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'porch', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the porch for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 39\n\ncheck the porch for the pillow or book.  \n                                      ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 15 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'porch' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to attic  \\ \tt Next actions: check the attic for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the basement.  \\ \tt > go to basement  \\ \tt Next actions: search the basement for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the garden or another area.  \\ \tt > go to garden  \\ \tt Next actions: look around the garden for the pillow or book.  \\ \tt > look around  \\ \tt Next actions 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the attic for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'attic', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the attic for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 39\n\ncheck the attic for the pillow or book.  \n                                      ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 16 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'attic' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to basement  \\ \tt Next actions: check the basement for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the garden or another area.  \\ \tt > go to garden  \\ \tt Next actions: search the garden for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the shed or another outdoor area.  \\ \tt > go to shed  \\ \tt Next actions: look around the shed for the required items.  \\ \tt > 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the basement for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'basement', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the basement for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 42\n\nheck the basement for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 17 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'basement' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to garden  \\ \tt Next actions: check the garden for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the shed or another outdoor area.  \\ \tt > go to shed  \\ \tt Next actions: search the shed for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider returning to the kitchen and checking again.  \\ \tt > go to kitchen  \\ \tt Next actions: look around the kitchen once more for any missed items. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the garden for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the garden for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 40\n\ncheck the garden for the pillow or book.  \n                                       ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 18 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'garden' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to shed  \\ \tt Next actions: check the shed for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the deck or another outdoor area.  \\ \tt > go to deck  \\ \tt Next actions: search the deck for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the patio or another area.  \\ \tt > go to patio  \\ \tt Next actions: look around the patio for the required items.  \\ \tt > 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the shed for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'shed', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the shed for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 38\n\ncheck the shed for the pillow or book.  \n                                     ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 19 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'shed' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to deck  \\ \tt Next actions: check the deck for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the patio or another outdoor area.  \\ \tt > go to patio  \\ \tt Next actions: search the patio for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the balcony or another area.  \\ \tt > go to balcony  \\ \tt Next actions: look around the balcony for the pillow or book.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the deck for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'deck', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the deck for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 38\n\ncheck the deck for the pillow or book.  \n                                     ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 20 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'deck' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to patio  \\ \tt Next actions: check the patio for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the balcony or another area.  \\ \tt > go to balcony  \\ \tt Next actions: search the balcony for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the roof or another area.  \\ \tt > go to roof  \\ \tt Next actions: look around the roof for the required items.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the patio for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'patio', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the patio for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 39\n\ncheck the patio for the pillow or book.  \n                                      ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 21 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'patio' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to balcony  \\ \tt Next actions: check the balcony for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the roof or another area.  \\ \tt > go to roof  \\ \tt Next actions: search the roof for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider returning to the kitchen and checking again.  \\ \tt > go to kitchen  \\ \tt Next actions: look around the kitchen once more for any missed items.  \\ \tt > 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the balcony for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'balcony', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the balcony for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 41\n\ncheck the balcony for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 22 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'balcony' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to roof  \\ \tt Next actions: check the roof for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the yard or another area.  \\ \tt > go to yard  \\ \tt Next actions: search the yard for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the greenhouse or another area.  \\ \tt > go to greenhouse  \\ \tt Next actions: look around the greenhouse for the required items.  \\ \tt > look 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the roof for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'roof', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the roof for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 38\n\ncheck the roof for the pillow or book.  \n                                     ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 23 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'roof' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to yard  \\ \tt Next actions: check the yard for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the greenhouse or another area.  \\ \tt > go to greenhouse  \\ \tt Next actions: search the greenhouse for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the toolshed or another area.  \\ \tt > go to toolshed  \\ \tt Next actions: look around the toolshed for the pillow or book. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the yard for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'yard', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the yard for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 38\n\ncheck the yard for the pillow or book.  \n                                     ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 24 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'yard' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to greenhouse  \\ \tt Next actions: check the greenhouse for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the workshop or another area.  \\ \tt > go to workshop  \\ \tt Next actions: search the workshop for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider returning to the kitchen and checking again.  \\ \tt > go to kitchen  \\ \tt Next actions: look around the kitchen once more for any missed items. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the greenhouse for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'greenhouse', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the greenhouse for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 44\n\nck the greenhouse for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 25 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'greenhouse' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to workshop  \\ \tt Next actions: check the workshop for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the office or another room.  \\ \tt > go to office  \\ \tt Next actions: search the office for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the library or another area.  \\ \tt > go to library  \\ \tt Next actions: look around the library for the required items.  \\ \tt > look around 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the workshop for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'workshop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the workshop for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 42\n\nheck the workshop for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 26 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'workshop' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to office  \\ \tt Next actions: check the office for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the library or another room.  \\ \tt > go to library  \\ \tt Next actions: search the library for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the guest room or another area.  \\ \tt > go to guest room  \\ \tt Next actions: look around the guest room for the required items. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the office for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'office', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the office for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 40\n\ncheck the office for the pillow or book.  \n                                       ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 27 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'office' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to library  \\ \tt Next actions: check the library for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the guest room or another area.  \\ \tt > go to guest room  \\ \tt Next actions: search the guest room for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the master bedroom or another area.  \\ \tt > go to master bedroom  \\ \tt Next actions: look around the master bedroom for the pillow or 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the library for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'library', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the library for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 41\n\ncheck the library for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 28 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'library' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to guest room  \\ \tt Next actions: check the guest room for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the master bedroom or another room.  \\ \tt > go to master bedroom  \\ \tt Next actions: search the master bedroom for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the children's room or another area.  \\ \tt > go to children's room  \\ \tt Next actions: look around the 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the guest room for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'guest room', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the guest room for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 44\n\nck the guest room for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 29 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'guest room' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to master bedroom  \\ \tt Next actions: check the master bedroom for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the children's room or another area.  \\ \tt > go to children's room  \\ \tt Next actions: search the children's room for any clues or items needed.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the study or another room.  \\ \tt > go to study  \\ \tt Next actions: look around the study for the 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the master bedroom for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'master bedroom', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ['check the master bedroom for the pillow or book.  \n> look around'] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches '.' in the current parser context, at line 1 col 48\n\nhe master bedroom for the pillow or book.  \n                                        ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 30 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'master bedroom' means. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to children's room  \\ \tt Next actions: check the children's room for the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if not found, perhaps check the study or another room.  \\ \tt > go to study  \\ \tt Next actions: search the study for any signs of the pillow or book.  \\ \tt > look around  \\ \tt Next actions: if still not found, consider checking the den or another area.  \\ \tt > go to den  \\ \tt Next actions: look around the den for the required items 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ["check the children's room for the pillow or book.  \n> look around"] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches ''' in the current parser context, at line 1 col 15\n\ngo to children's room\n              ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 ["check the children's room for the pillow or book.  \n> look around"] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 [[[], "I don't know what you mean.", {'phase': 'parsing', 'fail_type': 'lark_exception', 'arg': "No terminal matches ''' in the current parser context, at line 1 col 19\n\ncheck the children's room for the pillow or book.  \n                  ^\nExpected one of: \n\t* WS\n\t* WORD\n", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'cupboard1', 'kitchen1'], ['at', 'refrigerator1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'player1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'banana1', 'pantry1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['at', 'freezer1', 'pantry1']], 'known_entities_ratio': 0.3793103448275862, 'visited_rooms': ['kitchen1', 'pantry1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [['at', 'plate1', 'kitchen1']], 'known_goal_entities_ratio': 0.25}}]] 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0.0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 31 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what you mean. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 It seems like the locations I'm trying to access aren't available in this game. Maybe I should try a different approach.\\ \tt \\ \tt > take plate  \\ \tt Next actions: hold the plate, now need to find a table to place it on.  \\ \tt > look around  \\ \tt Next actions: look for a table in the kitchen or nearby areas.  \\ \tt > go to dining area  \\ \tt Next actions: if there's a table there, place the plate on it.  \\ \tt > look around  \\ \tt Next actions: if no table 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 command_tag_missing 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 command_tag_missing 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'game_successfully_finished': False} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

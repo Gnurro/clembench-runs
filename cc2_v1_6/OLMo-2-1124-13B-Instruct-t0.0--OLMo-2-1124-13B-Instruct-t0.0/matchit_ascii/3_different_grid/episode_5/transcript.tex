@@ -1,0 +1,624 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X X ▢\\ \tt X X X X X\\ \tt ▢ ▢ X X ▢\\ \tt ▢ ▢ X ▢ ▢ 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DESCRIPTION: The grid consists of a 5x5 matrix. The pattern is as follows: The first and last rows are identical, containing two empty squares, one filled square, two empty squares, and one filled square. The second row has two empty squares followed by two filled squares and one empty square. The third row is entirely filled with five filled squares. The fourth row mirrors the first row, with two empty squares, one filled square, two empty squares, and one filled square. The 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt X X X X X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DESCRIPTION: The grid consists of a 5x5 matrix. The first two rows and the first two columns are filled with empty squares (▢). The third row and third column each have one X (X) in the middle, and the last row and last column are entirely filled with Xs (X X X X X). 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 This is my DESCRIPTION: The grid consists of a 5x5 matrix. The pattern is as follows: The first and last rows are identical, containing two empty squares, one filled square, two empty squares, and one filled square. The second row has two empty squares followed by two filled squares and one empty square. The third row is entirely filled with five filled squares. The fourth row mirrors the first row, with two empty squares, one filled square, two empty squares, and one filled square. The\\ \tt Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Are the filled squares in your grid located in the same positions as the filled squares in my grid? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 This is my DESCRIPTION: The grid consists of a 5x5 matrix. The first two rows and the first two columns are filled with empty squares (▢). The third row and third column each have one X (X) in the middle, and the last row and last column are entirely filled with Xs (X X X X X).\\ \tt QUESTION: Are the filled squares in your grid located in the same positions as the filled squares in my grid? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, the filled squares in your grid are not in the same positions as the filled squares in my grid. In your description, the filled squares (X) are concentrated in the third row and third column, with the third row being entirely filled and the third column having one X in the middle. In contrast, my grid has filled squares in the first and last rows, with one filled square in the second and fourth rows, and also in the first and last columns, with additional 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Are there any rows or columns in your grid that are entirely filled with empty squares (▢)? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, the filled squares in your grid are not in the same positions as the filled squares in my grid. In your description, the filled squares (X) are concentrated in the third row and third column, with the third row being entirely filled and the third column having one X in the middle. In contrast, my grid has filled squares in the first and last rows, with one filled square in the second and fourth rows, and also in the first and last columns, with additional\\ \tt QUESTION: Are there any rows or columns in your grid that are entirely filled with empty squares (▢)? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: Yes, in my grid, the second and fourth rows are entirely filled with empty squares (▢). Additionally, the first and second columns are also entirely filled with empty squares (▢). 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Are there any rows or columns in your grid that contain exactly three filled squares (X)? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: Yes, in my grid, the second and fourth rows are entirely filled with empty squares (▢). Additionally, the first and second columns are also entirely filled with empty squares (▢).\\ \tt QUESTION: Are there any rows or columns in your grid that contain exactly three filled squares (X)? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, there are no rows or columns in my grid that contain exactly three filled squares (X). 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Does your grid have any symmetrical patterns or features? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, there are no rows or columns in my grid that contain exactly three filled squares (X).\\ \tt QUESTION: Does your grid have any symmetrical patterns or features? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: Yes, my grid has symmetrical patterns. The first and last rows are identical, and the first and last columns are also identical. Additionally, the second and fourth rows are mirror images of each other, filled entirely with empty squares (▢). 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Are there any rows or columns in your grid that have an alternating pattern of filled and empty squares (X and ▢)? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: Yes, my grid has symmetrical patterns. The first and last rows are identical, and the first and last columns are also identical. Additionally, the second and fourth rows are mirror images of each other, filled entirely with empty squares (▢).\\ \tt QUESTION: Are there any rows or columns in your grid that have an alternating pattern of filled and empty squares (X and ▢)? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, there are no rows or columns in my grid that have an alternating pattern of filled and empty squares (X and ▢). 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Does your grid have any rows or columns that are completely different from any other row or column in terms of the arrangement of filled and empty squares? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, there are no rows or columns in my grid that have an alternating pattern of filled and empty squares (X and ▢).\\ \tt QUESTION: Does your grid have any rows or columns that are completely different from any other row or column in terms of the arrangement of filled and empty squares? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: Yes, my grid has rows and columns that are completely different from each other. The third row is entirely filled with five filled squares (X X X X X), which is unique among the rows. Similarly, the first and last columns are filled with five filled squares (X X X X X), which is unique among the columns. Additionally, the second and fourth rows are entirely filled with empty squares (▢ ▢ ▢ ▢ ▢), which is a unique pattern 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DECISION: different grids 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: Yes, my grid has rows and columns that are completely different from each other. The third row is entirely filled with five filled squares (X X X X X), which is unique among the rows. Similarly, the first and last columns are filled with five filled squares (X X X X X), which is unique among the columns. Additionally, the second and fourth rows are entirely filled with empty squares (▢ ▢ ▢ ▢ ▢), which is a unique pattern\\ \tt Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DECISION: different grids 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

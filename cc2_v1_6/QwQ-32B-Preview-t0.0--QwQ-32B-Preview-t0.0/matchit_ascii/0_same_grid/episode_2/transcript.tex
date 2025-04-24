@@ -1,0 +1,624 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ ▢ ▢ X\\ \tt ▢ ▢ ▢ X ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ X ▢ ▢ ▢\\ \tt X ▢ ▢ ▢ ▢ 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DESCRIPTION: The grid is a 5x5 matrix with 'X's placed in positions that form a diagonal from the top-right corner to the bottom-left corner. Specifically, the positions are: row 1, column 5; row 2, column 4; row 3, column 3; row 4, column 2; and row 5, column 1. All other positions are empty squares. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ ▢ ▢ X\\ \tt ▢ ▢ ▢ X ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ X ▢ ▢ ▢\\ \tt X ▢ ▢ ▢ ▢ 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DESCRIPTION: The grid is a 5x5 matrix with 'X's placed in positions that form a diagonal from the top-right corner to the bottom-left corner. Specifically, the positions are: row 1, column 5; row 2, column 4; row 3, column 3; row 4, column 2; and row 5, column 1. All other positions are empty squares. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 This is my DESCRIPTION: The grid is a 5x5 matrix with 'X's placed in positions that form a diagonal from the top-right corner to the bottom-left corner. Specifically, the positions are: row 1, column 5; row 2, column 4; row 3, column 3; row 4, column 2; and row 5, column 1. All other positions are empty squares.\\ \tt Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Is there an 'X' in the center position of the grid, which would be row 3, column 3? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 This is my DESCRIPTION: The grid is a 5x5 matrix with 'X's placed in positions that form a diagonal from the top-right corner to the bottom-left corner. Specifically, the positions are: row 1, column 5; row 2, column 4; row 3, column 3; row 4, column 2; and row 5, column 1. All other positions are empty squares.\\ \tt QUESTION: Is there an 'X' in the center position of the grid, which would be row 3, column 3? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: Yes, there is an 'X' in row 3, column 3. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Are there any 'X's placed in positions that are not on the diagonal from the top-right to the bottom-left corner? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: Yes, there is an 'X' in row 3, column 3.\\ \tt QUESTION: Are there any 'X's placed in positions that are not on the diagonal from the top-right to the bottom-left corner? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: No, all 'X's are only on the diagonal from the top-right to the bottom-left corner.\\ \tt QUESTION: Is the grid symmetric in any way, such as being symmetrical along the diagonal or any other axis? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Are there any rows or columns that contain more than one 'X'? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: No, all 'X's are only on the diagonal from the top-right to the bottom-left corner.\\ \tt QUESTION: Is the grid symmetric in any way, such as being symmetrical along the diagonal or any other axis?\\ \tt QUESTION: Are there any rows or columns that contain more than one 'X'? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, each row and each column contains only one 'X'. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Is there any pattern or specific arrangement of 'X's outside of the diagonal that you described? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, each row and each column contains only one 'X'.\\ \tt QUESTION: Is there any pattern or specific arrangement of 'X's outside of the diagonal that you described? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: No, there are no 'X's outside of the diagonal from the top-right to the bottom-left corner.\\ \tt QUESTION: Could you confirm if the 'X's are placed such that moving from one 'X' to the next, you are moving diagonally towards the bottom-left? For example, from row 1, column 5 to row 2, column 4, and so on? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Is there a particular reason or rule that determines the placement of the 'X's in this diagonal pattern? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: No, there are no 'X's outside of the diagonal from the top-right to the bottom-left corner.\\ \tt QUESTION: Could you confirm if the 'X's are placed such that moving from one 'X' to the next, you are moving diagonally towards the bottom-left? For example, from row 1, column 5 to row 2, column 4, and so on?\\ \tt QUESTION: Is there a particular reason or rule that determines the placement of the 'X's in this diagonal pattern? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: The 'X's are placed on the secondary diagonal of the grid, which runs from the top-right corner to the bottom-left corner. This is the rule determining their placement. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Are there any other marks or symbols in the grid besides 'X's and empty squares? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: The 'X's are placed on the secondary diagonal of the grid, which runs from the top-right corner to the bottom-left corner. This is the rule determining their placement.\\ \tt QUESTION: Are there any other marks or symbols in the grid besides 'X's and empty squares? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: No, there are only 'X's and empty squares in the grid.\\ \tt QUESTION: If I were to select a random cell from the grid, what is the probability that it contains an 'X'? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DECISION: same grid 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: No, there are only 'X's and empty squares in the grid.\\ \tt QUESTION: If I were to select a random cell from the grid, what is the probability that it contains an 'X'?\\ \tt Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DECISION: same grid 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

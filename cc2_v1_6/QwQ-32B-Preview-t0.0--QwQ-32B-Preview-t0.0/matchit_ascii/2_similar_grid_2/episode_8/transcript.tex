@@ -1,0 +1,624 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ X X X ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ X ▢ X ▢\\ \tt ▢ X X X ▢\\ \tt ▢ X X X ▢ 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DESCRIPTION: The grid is a 5x5 grid with squares containing either an "X" or left blank. Starting from the top-left corner, the first row has blank squares on the first and last positions, with "X"s in the middle three positions. The second row has blank squares except for the third position, which has an "X". The third row alternates between blank, "X", blank, "X", blank. The fourth and fifth rows have "X"s in the 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt ▢ ▢ X X ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ X ▢ X X\\ \tt ▢ X X X ▢\\ \tt ▢ X X X ▢ 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DESCRIPTION: The grid is a 5x5 matrix with squares containing either "▢" or "X". Starting from the top-left corner, the first row has two "▢", followed by two "X", and ends with one "▢". The second row has two "▢", then one "X", another "▢", and ends with one "▢". The third row starts with one "▢", followed by one "X", then one "▢", and ends with two "X 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 This is my DESCRIPTION: The grid is a 5x5 grid with squares containing either an "X" or left blank. Starting from the top-left corner, the first row has blank squares on the first and last positions, with "X"s in the middle three positions. The second row has blank squares except for the third position, which has an "X". The third row alternates between blank, "X", blank, "X", blank. The fourth and fifth rows have "X"s in the\\ \tt Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: In your grid, is there any row that has all "X"s without any "▢"? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 This is my DESCRIPTION: The grid is a 5x5 matrix with squares containing either "▢" or "X". Starting from the top-left corner, the first row has two "▢", followed by two "X", and ends with one "▢". The second row has two "▢", then one "X", another "▢", and ends with one "▢". The third row starts with one "▢", followed by one "X", then one "▢", and ends with two "X\\ \tt QUESTION: In your grid, is there any row that has all "X"s without any "▢"? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, there is no row in my grid that has all "X"s without any "▢". 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: In your grid, is there any column that contains more "X"s than "▢"? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, there is no row in my grid that has all "X"s without any "▢".\\ \tt QUESTION: In your grid, is there any column that contains more "X"s than "▢"? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: In my grid, the third column has four "X"s and one "▢", so yes, there is at least one column with more "X"s than "▢". 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: In your grid, is there any column where "X"s and "▢"s are equally distributed? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: In my grid, the third column has four "X"s and one "▢", so yes, there is at least one column with more "X"s than "▢".\\ \tt QUESTION: In your grid, is there any column where "X"s and "▢"s are equally distributed? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: In my grid, none of the columns have an equal number of "X"s and "▢". For example, in the first column, there are three "▢" and two "X"s, which is not equal. Similarly, other columns have varying counts but none with equality. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: In your grid, is there a diagonal line from the top-left to the bottom-right that consists entirely of "X"s? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: In my grid, none of the columns have an equal number of "X"s and "▢". For example, in the first column, there are three "▢" and two "X"s, which is not equal. Similarly, other columns have varying counts but none with equality.\\ \tt QUESTION: In your grid, is there a diagonal line from the top-left to the bottom-right that consists entirely of "X"s? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: In my grid, the diagonal from top-left to bottom-right is: "▢", "X", "▢", "X", "X". So, it does not consist entirely of "X"s. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: In your grid, is there a diagonal line from the top-right to the bottom-left that consists entirely of "X"s? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: In my grid, the diagonal from top-left to bottom-right is: "▢", "X", "▢", "X", "X". So, it does not consist entirely of "X"s.\\ \tt QUESTION: In your grid, is there a diagonal line from the top-right to the bottom-left that consists entirely of "X"s? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: In my grid, the diagonal from top-right to bottom-left is: "▢", "X", "X", "X", "▢". So, it does not consist entirely of "X"s. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: In your grid, how many "X"s are there in the central row? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: In my grid, the diagonal from top-right to bottom-left is: "▢", "X", "X", "X", "▢". So, it does not consist entirely of "X"s.\\ \tt QUESTION: In your grid, how many "X"s are there in the central row? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: In my grid, the central row is the third row, which has "▢", "X", "▢", "X", "X". So, there are three "X"s in the central row. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DECISION: different grids 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: In my grid, the central row is the third row, which has "▢", "X", "▢", "X", "X". So, there are three "X"s in the central row.\\ \tt Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DECISION: different grids 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

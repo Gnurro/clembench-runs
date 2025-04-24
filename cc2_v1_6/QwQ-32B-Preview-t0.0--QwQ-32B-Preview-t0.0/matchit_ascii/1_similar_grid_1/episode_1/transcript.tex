@@ -1,0 +1,372 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt X ▢ ▢ ▢ X\\ \tt X X ▢ ▢ X\\ \tt X ▢ X ▢ X\\ \tt X ▢ ▢ X X\\ \tt X ▢ ▢ ▢ X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DESCRIPTION: X ▢ ▢ ▢ X\\ \tt X X ▢ ▢ X\\ \tt X ▢ X ▢ X\\ \tt X ▢ ▢ X X\\ \tt X ▢ ▢ ▢ X 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt X ▢ ▢ ▢ X\\ \tt X ▢ ▢ X X\\ \tt X ▢ X ▢ X\\ \tt X X ▢ ▢ X\\ \tt X ▢ ▢ ▢ X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DESCRIPTION: X ▢ ▢ ▢ X\\ \tt X ▢ ▢ X X\\ \tt X ▢ X ▢ X\\ \tt X X ▢ ▢ X\\ \tt X ▢ ▢ ▢ X 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 This is my DESCRIPTION: X ▢ ▢ ▢ X\\ \tt X X ▢ ▢ X\\ \tt X ▢ X ▢ X\\ \tt X ▢ ▢ X X\\ \tt X ▢ ▢ ▢ X\\ \tt Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Is there a row in your grid where all the X's are in the first and last columns, and the middle three columns are all ▢? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 This is my DESCRIPTION: X ▢ ▢ ▢ X\\ \tt X ▢ ▢ X X\\ \tt X ▢ X ▢ X\\ \tt X X ▢ ▢ X\\ \tt X ▢ ▢ ▢ X\\ \tt QUESTION: Is there a row in your grid where all the X's are in the first and last columns, and the middle three columns are all ▢? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: Yes, the first and fifth rows match that description. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: In your grid, is there any column that has all X's except for one ▢? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: Yes, the first and fifth rows match that description.\\ \tt QUESTION: In your grid, is there any column that has all X's except for one ▢? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: No, in my grid, no column has all X's except for one ▢. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: In your grid, is there a column where the X's and ▢'s are arranged in a symmetrical pattern? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: No, in my grid, no column has all X's except for one ▢.\\ \tt QUESTION: In your grid, is there a column where the X's and ▢'s are arranged in a symmetrical pattern? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: Let me check. In my grid, looking at each column:\\ \tt \\ \tt First column: X, X, X, X, X → All X's, which is symmetrical.\\ \tt \\ \tt Second column: ▢, ▢, ▢, ▢, ▢ → All ▢'s, which is symmetrical.\\ \tt \\ \tt Third column: ▢, ▢, X, ▢, ▢ → This seems symmetrical if we consider the middle row as the axis.\\ \tt \\ \tt Fourth column 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 Sorry, I was interrupted. Continuing from where I left off:\\ \tt \\ \tt Fourth column: ▢, ▢, ▢, X, ▢ → This doesn't seem symmetrical.\\ \tt \\ \tt Fifth column: X, X, X, X, X → All X's, which is symmetrical.\\ \tt \\ \tt So, columns 1, 2, and 5 are fully symmetrical, while column 3 has a symmetrical arrangement with the middle row as the axis, but column 4 is not 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 abort, first word: Sorry, 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Aborted 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Aborted 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

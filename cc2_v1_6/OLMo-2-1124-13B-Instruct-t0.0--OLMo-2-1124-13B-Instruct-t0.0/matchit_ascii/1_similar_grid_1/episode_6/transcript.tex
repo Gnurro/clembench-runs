@@ -1,0 +1,624 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt X X X X X\\ \tt ▢ ▢ ▢ X ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ X ▢ ▢ ▢\\ \tt X X X X X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DESCRIPTION: The grid consists of a 5x5 arrangement of symbols where the top row and the rightmost column are entirely filled with Xs. The second row has two Xs and three empty circles (▢). The third row contains one X and two empty circles, with the X positioned centrally. The fourth row has one X in the middle and empty circles on either side. The bottom row mirrors the top row, being completely filled with Xs. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are participating in a collaborative guessing game.\\ \tt The goal is to find out whether this grid and another picture only I can see, are the same.\\ \tt Please describe your grid first. Then, I will provide my description and we can ask each other questions about the grids to figure out whether they are the same. Now start your short grid description with "DESCRIPTION:" followed by the description. Do not add anything else. This is your grid:\\ \tt X X X X X\\ \tt ▢ X ▢ ▢ ▢\\ \tt ▢ ▢ X ▢ ▢\\ \tt ▢ ▢ ▢ X ▢\\ \tt X X X X X 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DESCRIPTION: The grid consists of a 5x5 matrix. The top row and the bottom row are entirely filled with Xs. The second row has one X and four empty squares (▢). The third row has two Xs and three empty squares (▢). The fourth row has one X in the middle and empty squares on both sides. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 This is my DESCRIPTION: The grid consists of a 5x5 arrangement of symbols where the top row and the rightmost column are entirely filled with Xs. The second row has two Xs and three empty circles (▢). The third row contains one X and two empty circles, with the X positioned centrally. The fourth row has one X in the middle and empty circles on either side. The bottom row mirrors the top row, being completely filled with Xs.\\ \tt Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Are the empty circles (▢) in the second row aligned vertically, with one at the start and two in a row towards the end? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 This is my DESCRIPTION: The grid consists of a 5x5 matrix. The top row and the bottom row are entirely filled with Xs. The second row has one X and four empty squares (▢). The third row has two Xs and three empty squares (▢). The fourth row has one X in the middle and empty squares on both sides.\\ \tt QUESTION: Are the empty circles (▢) in the second row aligned vertically, with one at the start and two in a row towards the end? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, the empty circles (▢) in the second row are not aligned vertically as described. In my grid, the second row contains two Xs and three empty circles (▢), with the empty circles not grouped together but rather spread out: one at the beginning, one in the middle, and one towards the end. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Are there any empty circles (▢) in the third row directly adjacent to each other? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, the empty circles (▢) in the second row are not aligned vertically as described. In my grid, the second row contains two Xs and three empty circles (▢), with the empty circles not grouped together but rather spread out: one at the beginning, one in the middle, and one towards the end.\\ \tt QUESTION: Are there any empty circles (▢) in the third row directly adjacent to each other? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: No, there are no empty circles (▢) in the third row that are directly adjacent to each other. The X in the third row is centered with empty circles on either side. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Is there an empty circle (▢) in the fourth row positioned directly below an empty circle (▢) from the third row? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: No, there are no empty circles (▢) in the third row that are directly adjacent to each other. The X in the third row is centered with empty circles on either side.\\ \tt QUESTION: Is there an empty circle (▢) in the fourth row positioned directly below an empty circle (▢) from the third row? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, there is no empty circle (▢) in the fourth row positioned directly below an empty circle (▢) from the third row. The empty circles in the fourth row are on either side of the single X in the middle, with no direct vertical alignment with the third row's empty circles. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Is there an X in the fourth row that is directly centered horizontally? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, there is no empty circle (▢) in the fourth row positioned directly below an empty circle (▢) from the third row. The empty circles in the fourth row are on either side of the single X in the middle, with no direct vertical alignment with the third row's empty circles.\\ \tt QUESTION: Is there an X in the fourth row that is directly centered horizontally? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: Yes, there is an X in the fourth row that is directly centered horizontally. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 QUESTION: Are there any Xs in the second and fourth rows that are vertically aligned? 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: Yes, there is an X in the fourth row that is directly centered horizontally.\\ \tt QUESTION: Are there any Xs in the second and fourth rows that are vertically aligned? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 ANSWER: No, there are no Xs in the second and fourth rows that are vertically aligned. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Now ask a question in order to find out new aspects of my grid that may be different to your grid. Start with "QUESTION:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 QUESTION: Is there an X in the third row that is the only X in its respective column? 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 ANSWER: No, there are no Xs in the second and fourth rows that are vertically aligned.\\ \tt QUESTION: Is there an X in the third row that is the only X in its respective column? Start your answer with "ANSWER:" and do not add anything else. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 ANSWER: Yes, there is an X in the third row that is the only X in its respective column. 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 DECISION: different grids 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 ANSWER: Yes, there is an X in the third row that is the only X in its respective column.\\ \tt Now come to a decision. What do you think: are your grid and the other grid described the same?  Write "DECISION: same grid" if you think they are the same grid or "DECISION: different grids" if you think they are different grids. Do not add anything else.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 DECISION: different grids 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 success 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

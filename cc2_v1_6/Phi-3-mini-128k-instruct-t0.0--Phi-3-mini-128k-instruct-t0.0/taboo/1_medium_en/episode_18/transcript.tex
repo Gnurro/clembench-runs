@@ -1,0 +1,324 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a collaborative word guessing game in which you have to describe a target word for another player to guess.\\ \tt \\ \tt Rules:\\ \tt (a) You have to reply in the form: CLUE: <some text>. Guesses from the other player will start with GUESS.\\ \tt (b) You cannot use the target word itself, parts or morphological variants of it in your description.\\ \tt (c) In addition, the same rules apply for related words which are provided below.\\ \tt \\ \tt End conditions:\\ \tt (i) If you use the target word or a related word in your description, then you lose.\\ \tt (ii) If the other player can guess the target word in 3 tries, you both win.\\ \tt \\ \tt Let us start.\\ \tt \\ \tt This is the target word that you need to describe and that the other player needs to guess:\\ \tt \\ \tt orient\\ \tt \\ \tt Related words are:\\ \tt \\ \tt - introduce\\ \tt - educate\\ \tt - familiarize\\ \tt \\ \tt Important: You are under time pressure, give short descriptions that are to the point! 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: This word is often used when someone is being shown around a new place or given an overview of a topic. It involves guiding someone to understand the layout or the essentials of something.\\ \tt \\ \tt GUESS: Orient\\ \tt \\ \tt CLUE: This word is similar to the first one but involves a more personal interaction, where someone is being made aware of their presence or role in a new environment or situation.\\ \tt \\ \tt GUESS: Introduce\\ \tt \\ \tt CLUE 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 this word is often used when someone is being shown around a new place or given an overview of a topic it involves guiding someone to understand the layout or the essentials of something\\ \tt \\ \tt guess orient\\ \tt \\ \tt  this word is similar to the first one but involves a more personal interaction where someone is being made aware of their presence or role in a new environment or situation\\ \tt \\ \tt guess introduce\\ \tt \\ \tt clue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are playing a collaborative word guessing game in which you have to guess a target word that another player describes to you.\\ \tt \\ \tt You can make one guess at each trial. You win when you guess the target word. You lose when you cannot guess it in 3 tries.\\ \tt \\ \tt After each trial you will get a new hint from the other player which starts with CLUE.\\ \tt \\ \tt Make your guesses by just saying the word using the following form: GUESS: <a word>\\ \tt \\ \tt Let us start.\\ \tt \\ \tt \\ \tt CLUE: This word is often used when someone is being shown around a new place or given an overview of a topic. It involves guiding someone to understand the layout or the essentials of something.\\ \tt \\ \tt GUESS: Orient\\ \tt \\ \tt CLUE: This word is similar to the first one but involves a more personal interaction, where someone is being made aware of their presence or role in a new environment or situation.\\ \tt \\ \tt GUESS: Introduce\\ \tt \\ \tt CLUE 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Present<|end|> 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 presentend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: Present<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: This word is akin to the previous one but focuses on the act of making someone aware of their surroundings or the context they are in, often used in the context of new experiences or environments.\\ \tt \\ \tt GUESS: Orient\\ \tt \\ \tt CLUE: This word is related to the first two but emphasizes the process of making someone understand or get used to something new, often through explanation or demonstration.\\ \tt \\ \tt GUESS: Educate\\ \tt \\ \tt CL 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 this word is akin to the previous one but focuses on the act of making someone aware of their surroundings or the context they are in often used in the context of new experiences or environments\\ \tt \\ \tt guess orient\\ \tt \\ \tt  this word is related to the first two but emphasizes the process of making someone understand or get used to something new often through explanation or demonstration\\ \tt \\ \tt guess educate\\ \tt \\ \tt cl 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: This word is akin to the previous one but focuses on the act of making someone aware of their surroundings or the context they are in, often used in the context of new experiences or environments.\\ \tt \\ \tt GUESS: Orient\\ \tt \\ \tt CLUE: This word is related to the first two but emphasizes the process of making someone understand or get used to something new, often through explanation or demonstration.\\ \tt \\ \tt GUESS: Educate\\ \tt \\ \tt CL 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Teach<|end|> 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 teachend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: Teach<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: This word is similar to the last one but is more general and can apply to any form of imparting knowledge or skills, not limited to the context of new environments or experiences.\\ \tt \\ \tt GUESS: Educate\\ \tt \\ \tt CLUE: This word is akin to the previous one but is more specific to the act of providing knowledge or information to someone, often in a structured or formal setting.\\ \tt \\ \tt GUESS: Inform<|end|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 this word is similar to the last one but is more general and can apply to any form of imparting knowledge or skills not limited to the context of new environments or experiences\\ \tt \\ \tt guess educate\\ \tt \\ \tt  this word is akin to the previous one but is more specific to the act of providing knowledge or information to someone often in a structured or formal setting\\ \tt \\ \tt guess informend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: This word is similar to the last one but is more general and can apply to any form of imparting knowledge or skills, not limited to the context of new environments or experiences.\\ \tt \\ \tt GUESS: Educate\\ \tt \\ \tt CLUE: This word is akin to the previous one but is more specific to the act of providing knowledge or information to someone, often in a structured or formal setting.\\ \tt \\ \tt GUESS: Inform<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Inform<|end|> 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 informend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

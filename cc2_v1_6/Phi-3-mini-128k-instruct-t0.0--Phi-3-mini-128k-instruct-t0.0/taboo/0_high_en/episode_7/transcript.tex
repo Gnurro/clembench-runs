@@ -1,0 +1,324 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a collaborative word guessing game in which you have to describe a target word for another player to guess.\\ \tt \\ \tt Rules:\\ \tt (a) You have to reply in the form: CLUE: <some text>. Guesses from the other player will start with GUESS.\\ \tt (b) You cannot use the target word itself, parts or morphological variants of it in your description.\\ \tt (c) In addition, the same rules apply for related words which are provided below.\\ \tt \\ \tt End conditions:\\ \tt (i) If you use the target word or a related word in your description, then you lose.\\ \tt (ii) If the other player can guess the target word in 3 tries, you both win.\\ \tt \\ \tt Let us start.\\ \tt \\ \tt This is the target word that you need to describe and that the other player needs to guess:\\ \tt \\ \tt resume\\ \tt \\ \tt Related words are:\\ \tt \\ \tt - continue\\ \tt - summary\\ \tt - restart\\ \tt \\ \tt Important: You are under time pressure, give short descriptions that are to the point! 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A document that summarizes your professional achievements and skills. GUESS: summary\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that provides a concise overview of your past work and accomplishments. GUESS: resume<|end|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a document that summarizes your professional achievements and skills guess summary\\ \tt \\ \tt  a brief account of your work history and qualifications guess resume\\ \tt \\ \tt  a document that provides a concise overview of your past work and accomplishments guess resumeend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are playing a collaborative word guessing game in which you have to guess a target word that another player describes to you.\\ \tt \\ \tt You can make one guess at each trial. You win when you guess the target word. You lose when you cannot guess it in 3 tries.\\ \tt \\ \tt After each trial you will get a new hint from the other player which starts with CLUE.\\ \tt \\ \tt Make your guesses by just saying the word using the following form: GUESS: <a word>\\ \tt \\ \tt Let us start.\\ \tt \\ \tt \\ \tt CLUE: A document that summarizes your professional achievements and skills. GUESS: summary\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that provides a concise overview of your past work and accomplishments. GUESS: resume<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: resume\\ \tt \\ \tt \\ \tt CLUE: A document that provides a concise overview of your past work and accomplishments. GUESS: portfolio\\ \tt \\ \tt CLUE: A collection of work samples that showcase your skills and abilities. GUESS: portfolio\\ \tt \\ \tt CLUE: A compilation of your best work that demonstrates your expertise. GUESS: portfolio<|end|> 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 resume\\ \tt \\ \tt \\ \tt clue a document that provides a concise overview of your past work and accomplishments  portfolio\\ \tt \\ \tt clue a collection of work samples that showcase your skills and abilities  portfolio\\ \tt \\ \tt clue a compilation of your best work that demonstrates your expertise  portfolioend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: resume\\ \tt \\ \tt \\ \tt CLUE: A document that provides a concise overview of your past work and accomplishments. GUESS: portfolio\\ \tt \\ \tt CLUE: A collection of work samples that showcase your skills and abilities. GUESS: portfolio\\ \tt \\ \tt CLUE: A compilation of your best work that demonstrates your expertise. GUESS: portfolio<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A collection of work samples that showcase your skills and abilities. GUESS: portfolio\\ \tt \\ \tt CLUE: A compilation of your best work that demonstrates your expertise. GUESS: portfolio\\ \tt \\ \tt CLUE: A document that summarizes your professional achievements and skills. GUESS: resume\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a collection of work samples that showcase your skills and abilities guess portfolio\\ \tt \\ \tt  a compilation of your best work that demonstrates your expertise guess portfolio\\ \tt \\ \tt  a document that summarizes your professional achievements and skills guess resume\\ \tt \\ \tt  a brief account of your work history and qualifications guess resume\\ \tt \\ \tt  a document that 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: A collection of work samples that showcase your skills and abilities. GUESS: portfolio\\ \tt \\ \tt CLUE: A compilation of your best work that demonstrates your expertise. GUESS: portfolio\\ \tt \\ \tt CLUE: A document that summarizes your professional achievements and skills. GUESS: resume\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: portfolio\\ \tt \\ \tt \\ \tt CLUE: A document that summarizes your professional achievements and skills. GUESS: resume\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that outlines your educational background and any certifications you may have. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A detailed record of your academic and professional experiences, often used in 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 portfolio\\ \tt \\ \tt \\ \tt clue a document that summarizes your professional achievements and skills  resume\\ \tt \\ \tt clue a brief account of your work history and qualifications  resume\\ \tt \\ \tt clue a document that outlines your educational background and any certifications you may have  curriculum vitae\\ \tt \\ \tt clue a detailed record of your academic and professional experiences often used in 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: portfolio\\ \tt \\ \tt \\ \tt CLUE: A document that summarizes your professional achievements and skills. GUESS: resume\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that outlines your educational background and any certifications you may have. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A detailed record of your academic and professional experiences, often used in 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A detailed record of your academic and professional experiences, often used in academic and professional settings. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A document that outlines your educational background and any certifications you may have. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A collection of work samples that showcase your skills and abilities 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a detailed record of your academic and professional experiences often used in academic and professional settings guess curriculum vitae\\ \tt \\ \tt  a document that outlines your educational background and any certifications you may have guess curriculum vitae\\ \tt \\ \tt  a brief account of your work history and qualifications guess resume\\ \tt \\ \tt  a collection of work samples that showcase your skills and abilities 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: A detailed record of your academic and professional experiences, often used in academic and professional settings. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A document that outlines your educational background and any certifications you may have. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A collection of work samples that showcase your skills and abilities 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: curriculum vitae\\ \tt \\ \tt \\ \tt CLUE: A brief account of your work history and qualifications. GUESS: resume\\ \tt \\ \tt CLUE: A document that outlines your educational background and any certifications you may have. GUESS: curriculum vitae\\ \tt \\ \tt CLUE: A collection of work samples that showcase your skills and abilities. GUESS: portfolio\\ \tt \\ \tt CLUE: A detailed record of your academic and professional 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 curriculum vitae\\ \tt \\ \tt \\ \tt clue a brief account of your work history and qualifications  resume\\ \tt \\ \tt clue a document that outlines your educational background and any certifications you may have  curriculum vitae\\ \tt \\ \tt clue a collection of work samples that showcase your skills and abilities  portfolio\\ \tt \\ \tt clue a detailed record of your academic and professional 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

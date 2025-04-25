@@ -1,0 +1,324 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a collaborative word guessing game in which you have to describe a target word for another player to guess.\\ \tt \\ \tt Rules:\\ \tt (a) You have to reply in the form: CLUE: <some text>. Guesses from the other player will start with GUESS.\\ \tt (b) You cannot use the target word itself, parts or morphological variants of it in your description.\\ \tt (c) In addition, the same rules apply for related words which are provided below.\\ \tt \\ \tt End conditions:\\ \tt (i) If you use the target word or a related word in your description, then you lose.\\ \tt (ii) If the other player can guess the target word in 3 tries, you both win.\\ \tt \\ \tt Let us start.\\ \tt \\ \tt This is the target word that you need to describe and that the other player needs to guess:\\ \tt \\ \tt combination\\ \tt \\ \tt Related words are:\\ \tt \\ \tt - mixture\\ \tt - merger\\ \tt - cartel\\ \tt \\ \tt Important: You are under time pressure, give short descriptions that are to the point! 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A blend of different elements or substances.\\ \tt \\ \tt GUESS: Mixture\\ \tt \\ \tt CLUE: Two or more entities joining forces or becoming one.\\ \tt \\ \tt GUESS: Merger\\ \tt \\ \tt CLUE: A group of businesses that work together to control a market.\\ \tt \\ \tt GUESS: Cartel<|end|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a blend of different elements or substances\\ \tt \\ \tt guess mixture\\ \tt \\ \tt  two or more entities joining forces or becoming one\\ \tt \\ \tt guess merger\\ \tt \\ \tt  a group of businesses that work together to control a market\\ \tt \\ \tt guess cartelend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are playing a collaborative word guessing game in which you have to guess a target word that another player describes to you.\\ \tt \\ \tt You can make one guess at each trial. You win when you guess the target word. You lose when you cannot guess it in 3 tries.\\ \tt \\ \tt After each trial you will get a new hint from the other player which starts with CLUE.\\ \tt \\ \tt Make your guesses by just saying the word using the following form: GUESS: <a word>\\ \tt \\ \tt Let us start.\\ \tt \\ \tt \\ \tt CLUE: A blend of different elements or substances.\\ \tt \\ \tt GUESS: Mixture\\ \tt \\ \tt CLUE: Two or more entities joining forces or becoming one.\\ \tt \\ \tt GUESS: Merger\\ \tt \\ \tt CLUE: A group of businesses that work together to control a market.\\ \tt \\ \tt GUESS: Cartel<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Cartel\\ \tt \\ \tt \\ \tt CLUE: A word that describes a person who is not very smart or clever.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for a person who is not very good at making decisions or judgments.\\ \tt \\ \tt GUESS: Fool<|end|> 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 cartel\\ \tt \\ \tt \\ \tt clue a word that describes a person who is not very smart or clever\\ \tt \\ \tt  dumb\\ \tt \\ \tt clue a term for a person who is not very good at making decisions or judgments\\ \tt \\ \tt  foolend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: Cartel\\ \tt \\ \tt \\ \tt CLUE: A word that describes a person who is not very smart or clever.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for a person who is not very good at making decisions or judgments.\\ \tt \\ \tt GUESS: Fool<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A word that describes a person who is not very smart or clever.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for a person who is not very good at making decisions or judgments.\\ \tt \\ \tt GUESS: Fool<|end|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a word that describes a person who is not very smart or clever\\ \tt \\ \tt guess dumb\\ \tt \\ \tt  a term for a person who is not very good at making decisions or judgments\\ \tt \\ \tt guess foolend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: A word that describes a person who is not very smart or clever.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for a person who is not very good at making decisions or judgments.\\ \tt \\ \tt GUESS: Fool<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Fool\\ \tt \\ \tt \\ \tt CLUE: A word that refers to a person who is not very intelligent or lacks common sense.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for someone who often makes poor choices or lacks wisdom.\\ \tt \\ \tt GUESS: Stupid\\ \tt \\ \tt CLUE: A word for a person who is not very bright or lacks understanding.\\ \tt \\ \tt GUESS: Idiot\\ \tt \\ \tt CLUE: 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 fool\\ \tt \\ \tt \\ \tt clue a word that refers to a person who is not very intelligent or lacks common sense\\ \tt \\ \tt  dumb\\ \tt \\ \tt clue a term for someone who often makes poor choices or lacks wisdom\\ \tt \\ \tt  stupid\\ \tt \\ \tt clue a word for a person who is not very bright or lacks understanding\\ \tt \\ \tt  idiot\\ \tt \\ \tt clue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: Fool\\ \tt \\ \tt \\ \tt CLUE: A word that refers to a person who is not very intelligent or lacks common sense.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for someone who often makes poor choices or lacks wisdom.\\ \tt \\ \tt GUESS: Stupid\\ \tt \\ \tt CLUE: A word for a person who is not very bright or lacks understanding.\\ \tt \\ \tt GUESS: Idiot\\ \tt \\ \tt CLUE: 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A word that refers to a person who is not very intelligent or lacks common sense.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for someone who often makes poor choices or lacks wisdom.\\ \tt \\ \tt GUESS: Stupid\\ \tt \\ \tt CLUE: A word for a person who is not very bright or lacks understanding.\\ \tt \\ \tt GUESS: Idiot\\ \tt \\ \tt CLUE: A term for a person who is not very 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a word that refers to a person who is not very intelligent or lacks common sense\\ \tt \\ \tt guess dumb\\ \tt \\ \tt  a term for someone who often makes poor choices or lacks wisdom\\ \tt \\ \tt guess stupid\\ \tt \\ \tt  a word for a person who is not very bright or lacks understanding\\ \tt \\ \tt guess idiot\\ \tt \\ \tt  a term for a person who is not very 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 CLUE: A word that refers to a person who is not very intelligent or lacks common sense.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for someone who often makes poor choices or lacks wisdom.\\ \tt \\ \tt GUESS: Stupid\\ \tt \\ \tt CLUE: A word for a person who is not very bright or lacks understanding.\\ \tt \\ \tt GUESS: Idiot\\ \tt \\ \tt CLUE: A term for a person who is not very 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Idiot\\ \tt \\ \tt \\ \tt CLUE: A word that refers to a person who is not very intelligent or lacks common sense.\\ \tt \\ \tt GUESS: Dumb\\ \tt \\ \tt CLUE: A term for someone who often makes poor choices or lacks wisdom.\\ \tt \\ \tt GUESS: Stupid\\ \tt \\ \tt CLUE: A word for a person who is not very bright or lacks understanding.\\ \tt \\ \tt GUESS: Idiot\\ \tt \\ \tt CLUE: 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 idiot\\ \tt \\ \tt \\ \tt clue a word that refers to a person who is not very intelligent or lacks common sense\\ \tt \\ \tt  dumb\\ \tt \\ \tt clue a term for someone who often makes poor choices or lacks wisdom\\ \tt \\ \tt  stupid\\ \tt \\ \tt clue a word for a person who is not very bright or lacks understanding\\ \tt \\ \tt  idiot\\ \tt \\ \tt clue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

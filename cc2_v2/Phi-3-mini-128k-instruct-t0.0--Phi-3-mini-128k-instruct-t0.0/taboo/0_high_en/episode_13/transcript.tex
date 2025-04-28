@@ -1,0 +1,168 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a collaborative word guessing game in which you have to describe a target word for another player to guess.\\ \tt \\ \tt Rules:\\ \tt (a) You have to reply in the form: CLUE: <some text>. Guesses from the other player will start with GUESS.\\ \tt (b) You cannot use the target word itself, parts or morphological variants of it in your description.\\ \tt (c) In addition, the same rules apply for related words which are provided below.\\ \tt \\ \tt End conditions:\\ \tt (i) If you use the target word or a related word in your description, then you lose.\\ \tt (ii) If the other player can guess the target word in 3 tries, you both win.\\ \tt \\ \tt Let us start.\\ \tt \\ \tt This is the target word that you need to describe and that the other player needs to guess:\\ \tt \\ \tt pool\\ \tt \\ \tt Related words are:\\ \tt \\ \tt - swiming\\ \tt - group\\ \tt - Swimming\\ \tt \\ \tt Important: You are under time pressure, give short descriptions that are to the point! 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A body of water where people often go to relax, play, or exercise. It's a common recreational activity, especially in warm weather.\\ \tt \\ \tt GUESS: Swimming\\ \tt \\ \tt CLUE: A gathering of individuals who come together for a common purpose or activity.\\ \tt \\ \tt GUESS: Group\\ \tt \\ \tt CLUE: A place where people can gather to enjoy water-based activities, often with facilities for changing and sunbathing.\\ \tt \\ \tt GUESS: Pool<|end|> 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 a body of water where people often go to relax play or exercise its a common recreational activity especially in warm weather\\ \tt \\ \tt guess swimming\\ \tt \\ \tt  a gathering of individuals who come together for a common purpose or activity\\ \tt \\ \tt guess group\\ \tt \\ \tt  a place where people can gather to enjoy waterbased activities often with facilities for changing and sunbathing\\ \tt \\ \tt guess poolend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\rangle$B]}  
+	 You are playing a collaborative word guessing game in which you have to guess a target word that another player describes to you.\\ \tt \\ \tt You can make one guess at each trial. You win when you guess the target word. You lose when you cannot guess it in 3 tries.\\ \tt \\ \tt After each trial you will get a new hint from the other player which starts with CLUE.\\ \tt \\ \tt Make your guesses by just saying the word using the following form: GUESS: <a word>\\ \tt \\ \tt Let us start.\\ \tt \\ \tt \\ \tt CLUE: A body of water where people often go to relax, play, or exercise. It's a common recreational activity, especially in warm weather.\\ \tt \\ \tt GUESS: Swimming\\ \tt \\ \tt CLUE: A gathering of individuals who come together for a common purpose or activity.\\ \tt \\ \tt GUESS: Group\\ \tt \\ \tt CLUE: A place where people can gather to enjoy water-based activities, often with facilities for changing and sunbathing.\\ \tt \\ \tt GUESS: Pool<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{1,0.85,0.72}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$\langle$B]}  
+	 GUESS: Pool<|end|> 
+	  } 
+	   } 
+	   } 
+	  \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 poolend 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 GUESS: Pool<|end|> 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 CLUE: A large, often rectangular area filled with water, typically surrounded by a deck or poolside area, where people can engage in various water activities.\\ \tt \\ \tt GUESS: Pool\\ \tt \\ \tt CLUE: A collective of individuals who share a common interest or activity, often found in social settings or organized events.\\ \tt \\ \tt GUESS: Group\\ \tt \\ \tt CLUE: A designated area for leisure and recreation, often found in residential or commercial properties, equipped with amenities for swimming and sunbathing.\\ \tt \\ \tt GUESS: Pool\\ \tt \\ \tt CLUE: A form of physical exercise that involves propelling oneself through water using the limbs.\\ \tt \\ \tt GUESS: Swimming\\ \tt \\ \tt CLUE: A term that can refer to a collection of people or things that are considered together, often for a specific reason or activity.\\ \tt \\ \tt GUESS: Group\\ \tt \\ \tt CLUE: A facility designed for recreational swimming, often found in private homes, hotels, or community centers, featuring a contained area of water for swimming and related activities.\\ \tt \\ \tt GUESS: Pool\\ \tt \\ \tt CLUE: A competitive sport that involves swimming in a pool, often as part of a team or individual event.\\ \tt \\ \tt GUESS: Swimming\\ \tt \\ \tt CLUE: A social or organizational unit of people who come together for a shared purpose or interest, such as a club, 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 continue 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Related word 'Swimming' (stem=swim) is similar to clue word 'swimming' (stem=swim) 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

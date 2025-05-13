@@ -1,0 +1,771 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for new-words_home-delivery_medium_basic_medium, episode 0 with Qwen2-72B-Instruct-t0.0--Qwen2-72B-Instruct-t0.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 0</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Only reply with an action.<br/>For example:<br/>&gt; open cupboard<br/><br/>In addition to common actions, you can inate, pante and eness.<br/><br/>Your goal for this game is: Put the subst in the unsust, the mical on the table and the maten on the dente.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a bedroom now. There are a wardrobe, a pillow, a scont and a book. The wardrobe is closed. The pillow is on the scont. The book is on the floor. There is a passage to a unree here.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; open wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 0</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;malformed_command&#x27;, &#x27;arg&#x27;: &quot;{&#x27;type&#x27;: &#x27;unknown&#x27;, &#x27;arg1&#x27;: &#x27;open&#x27;}&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 1</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; examine wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 1</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 2</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>This is a wardrobe. The wardrobe is openable and currently closed. You can&#x27;t see the wardrobe&#x27;s contents because it is closed. The wardrobe is closed.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; open wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 2</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;malformed_command&#x27;, &#x27;arg&#x27;: &quot;{&#x27;type&#x27;: &#x27;unknown&#x27;, &#x27;arg1&#x27;: &#x27;open&#x27;}&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 3</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; interact with wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 3</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;interact&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 4</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;interact&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; pull wardrobe door</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 4</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;pull&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 5</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;pull&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; use wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 5</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;use&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 6</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;use&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; attempt to open wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 6</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;attempt&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 7</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;attempt&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; look inside wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 7</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_repr_str&#x27;, &#x27;arg&#x27;: &#x27;inside wardrobe&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 8</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what &#x27;inside wardrobe&#x27; means.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; inspect wardrobe closely</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 8</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_repr_str&#x27;, &#x27;arg&#x27;: &#x27;wardrobe closely&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 9</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what &#x27;wardrobe closely&#x27; means.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; try opening the wardrobe</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 9</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;try&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 10</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;try&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; operate wardrobe mechanism</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 10</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;operate&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 11</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;operate&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; push wardrobe door to open</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 11</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;push&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 12</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;push&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; knock on wardrobe to check if it&#x27;s locked</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 12</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;&#x27;&#x27; in the current parser context, at line 1 col 33\n\nknock on wardrobe to check if it&#x27;s locked\n                                ^\nExpected one of: \n\t* WORD\n\t* WS\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 13</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; search for a latch or handle on the wardrobe to open it</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 13</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;search&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 14</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;search&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; examine the wardrobe for any means of opening it</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 14</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;malformed_command&#x27;, &#x27;arg&#x27;: &quot;{&#x27;type&#x27;: &#x27;unknown&#x27;, &#x27;arg1&#x27;: &#x27;examine&#x27;}&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 15</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; gently nudge the wardrobe door to see if it will open</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 15</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;gently&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 16</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;gently&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; apply force to the wardrobe door to open it</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 16</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;apply&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 17</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;apply&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; find the door of the wardrobe and attempt to slide or swing it open</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 17</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;find&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 18</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;find&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; locate the door handle or knob of the wardrobe and turn it to open</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 18</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;locate&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 19</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;locate&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; reach for the wardrobe door and try to move it in an opening motion</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 19</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;reach&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 20</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;reach&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; use hands to grasp and manipulate the wardrobe door in an attempt to open it</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 20</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;use&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 21</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;use&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; visualize the wardrobe door in your mind and imagine pushing it open, then attempt to do so physically</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 21</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;,&#x27; in the current parser context, at line 1 col 69\n\nin your mind and imagine pushing it open, then attempt to do so physically\n                                        ^\nExpected one of: \n\t* WORD\n\t* WS\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 22</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; focus on the physical presence of the wardrobe door, determine its hinge direction, and apply force accordingly to open it</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 22</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;,&#x27; in the current parser context, at line 1 col 52\n\ne physical presence of the wardrobe door, determine its hinge direction, and app\n                                        ^\nExpected one of: \n\t* WORD\n\t* WS\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 23</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; look for any obvious way to open the wardrobe, such as a handle, knob, or space to insert fingers, and use it to open the door.</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 23</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;,&#x27; in the current parser context, at line 1 col 46\n\nfor any obvious way to open the wardrobe, such as a handle, knob, or space to in\n                                        ^\nExpected one of: \n\t* WORD\n\t* WS\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 24</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; observe the wardrobe carefully for any part that seems like it could be used to open the door, and attempt to use it to gain access to the wardrobe&#x27;s interior.</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 24</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;lark_exception&#x27;, &#x27;arg&#x27;: &quot;No terminal matches &#x27;,&#x27; in the current parser context, at line 1 col 94\n\ns like it could be used to open the door, and attempt to use it to gain access t\n                                        ^\nExpected one of: \n\t* WORD\n\t* WS\n&quot;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 25</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know what you mean.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; done</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 25</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;done&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;scont1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;book1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;pillow1&#x27;, &#x27;bedroom1&#x27;], [&#x27;at&#x27;, &#x27;wardrobe1&#x27;, &#x27;bedroom1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.1724137931034483, &#x27;visited_rooms&#x27;: [&#x27;bedroom1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.16666666666666666, &#x27;known_goal_entities&#x27;: [], &#x27;known_goal_entities_ratio&#x27;: 0.0}, &#x27;done_action&#x27;: True}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: model_done" class="msg gm-gm" style="">
+        <p>Model produced DONE action at turn 26, end episode.</p>
+    </div>
+
+    <div speaker="Game Master: game_result" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;game_successfully_finished&#x27;: False}</p>
+    </div>
+
+</div>
+
+</body>
+</html>

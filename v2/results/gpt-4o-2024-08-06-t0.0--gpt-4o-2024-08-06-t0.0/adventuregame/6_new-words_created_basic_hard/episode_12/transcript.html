@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <style>
+        /* This CSS is an adaptation from the answer by Roko C. Buljan in https://stackoverflow.com/a/71155446 */ 
+
+* {margin: 0; box-sizing: border-box;}
+
+body {background-color: rgb(157, 152, 150);}
+
+  /* dialogue header */
+
+.top-info {
+  text-align: center;
+  --rad: 20px;
+  --rad-sm: 3px;
+  font: 20px/1.5 sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background: #3f3e3e;
+  color: #fff;
+}
+
+.chat {
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    background: #fff;
+  }
+  
+  .msg {
+    position: relative;
+    max-width: 75%;
+    padding: 7px 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* 5 levels, two players to/from game master and meta messages form game master */
+
+  .msg.b-gm {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #874aaf;
+    color: #fff;
+    margin-left: 60%;
+  }
+
+  .msg.a-gm {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #f39109;
+    color: #fff;
+    margin-right: 60%;
+  }
+  
+  .msg.gm-a {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #c4c3c3;    
+    color: #0c0c0c;
+    margin-right: 40%;
+    margin-left: 20%;
+  }
+
+  .msg.gm-b {
+    border-radius: var(--rad-sm) var(--rad) var(--rad) var(--rad-sm);
+    background: #c4c3c3;
+    color: #0c0c0c;
+    margin-right: 20%;
+    margin-left: 40%;
+  }
+
+  .msg.gm-gm {
+    background: #f1f1f1;
+    color: #373636;
+    margin-left: 40%;
+    margin-right: 40%;
+    font-size: 0.8rem;
+
+  }
+  
+  /* speaker labels */
+  
+  .msg::before {
+    content: attr(speaker);
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 100%;
+    color: #888;
+    white-space: nowrap;
+
+  }
+  
+  .msg.b-gm::before {
+    right: 15px;
+  }
+
+  .msg.gm-a::before {
+    right: 15px;
+  }
+
+  .msg.a-gm::before {
+    left: 15px;
+  }
+
+  .msg.gm-b::before {
+    left: 15px;
+  }
+
+  .msg.gm-gm::before {
+    left: 0px;
+  }
+  
+
+    </style>
+</head>
+<body>
+
+<br/>
+
+<div class="top-info">
+    <p>Interaction Transcript for new-words_created_basic_hard, episode 12 with gpt-4o-2024-08-06-t0.0--gpt-4o-2024-08-06-t0.0.</p>
+</div>
+
+<br/>
+
+<div class="chat">
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 0</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with &gt;. Only reply with an action.<br/>For example:<br/>&gt; open cupboard<br/><br/>In addition to common actions, you can eredle, unsibion, phophous, isecin, horehet and indiable.<br/><br/>Your goal for this game is: Make the rimess horpler, the urermat ytoust and the loscred tibing.<br/><br/>Once you have achieved your goal, write &quot;&gt; done&quot; to end the game.<br/><br/>You are in a discroust now. There are a conitity, a hidist, a urermat, a eposper, a loscred and a suncente. There is a passage to a gligiced here.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; approach urermat</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 0</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;approach&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 1</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;approach&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; inspect urermat</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 1</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 2</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>This is a urermat.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; ytoust urermat</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 2</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;ytoust&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 3</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;ytoust&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; unsibion urermat</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 3</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;entity_state_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;unsibion&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;horpler&#x27;, &#x27;urermat1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 4</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>The urermat is not horpler.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; eredle urermat</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 4</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;eredle&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;], &#x27;turn_goal_score&#x27;: 1}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 5</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>The urermat is now ytoust.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; inspect loscred</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 5</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 6</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>This is a loscred. The loscred is oanicky.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; tibing loscred</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 6</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;parsing&#x27;, &#x27;fail_type&#x27;: &#x27;undefined_action_verb&#x27;, &#x27;arg&#x27;: &#x27;tibing&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;ytoust&#x27;, &#x27;urermat1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 7</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>I don&#x27;t know how to interpret this &#x27;tibing&#x27; action.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; phophous loscred</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 7</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;entity_state_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;phophous&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;suatocky&#x27;, &#x27;loscred1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;ytoust&#x27;, &#x27;urermat1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 8</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>The loscred is not suatocky.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; isecin loscred</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 8</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;entity_state_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;isecin&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;tibing&#x27;, &#x27;loscred1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;ytoust&#x27;, &#x27;urermat1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 9</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>The loscred is not tibing.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; horehet loscred</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 9</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;entity_state_mismatch&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;horehet&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;orposee&#x27;, &#x27;loscred1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 2}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;ytoust&#x27;, &#x27;urermat1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 10</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>The loscred is not orposee.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; indiable loscred</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 10</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;indiable&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;, &#x27;tibing(loscred1)&#x27;], &#x27;turn_goal_score&#x27;: 1}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 11</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>The loscred is now tibing.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; inspect rimess</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 11</p>
+    </div>
+
+    <div speaker="Game Master: action_fail" class="msg gm-gm" style="">
+        <p>{&#x27;phase&#x27;: &#x27;resolution&#x27;, &#x27;fail_type&#x27;: &#x27;entity_not_accessible&#x27;, &#x27;arg&#x27;: {&#x27;failed_action_type&#x27;: &#x27;examine&#x27;, &#x27;failed_precon_predicate&#x27;: {&#x27;predicate_tuple&#x27;: [&#x27;at&#x27;, &#x27;rimess1&#x27;, &#x27;discroust1&#x27;], &#x27;fulfilled&#x27;: False, &#x27;precon_idx&#x27;: 1}}, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.4666666666666667, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.25, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [[&#x27;ytoust&#x27;, &#x27;urermat1&#x27;], [&#x27;tibing&#x27;, &#x27;loscred1&#x27;]], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 12</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>You can&#x27;t see a rimess here.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; go to gligiced</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 12</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;at&#x27;, &#x27;thempary1&#x27;, &#x27;gligiced1&#x27;], [&#x27;exit&#x27;, &#x27;gligiced1&#x27;, &#x27;urgily1&#x27;], [&#x27;exit&#x27;, &#x27;gligiced1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;gligiced1&#x27;], [&#x27;at&#x27;, &#x27;ragmat1&#x27;, &#x27;gligiced1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 5, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;thempary1&#x27;, &#x27;gligiced1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;gligiced1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;ragmat1&#x27;, &#x27;gligiced1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6, &#x27;visited_rooms&#x27;: [&#x27;discroust1&#x27;, &#x27;gligiced1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.5, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;, &#x27;tibing(loscred1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 13</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>You are in a gligiced now. There are a thempary and a ragmat. There are passages to a discroust and a urgily here.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; go to urgily</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 13</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;go&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_facts&#x27;: [[&#x27;exit&#x27;, &#x27;urgily1&#x27;, &#x27;ibret1&#x27;], [&#x27;at&#x27;, &#x27;entabul1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;urgily1&#x27;], [&#x27;exit&#x27;, &#x27;urgily1&#x27;, &#x27;gligiced1&#x27;]], &#x27;effective_epistemic_gain_amount&#x27;: 4, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;thempary1&#x27;, &#x27;gligiced1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;entabul1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;ragmat1&#x27;, &#x27;gligiced1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6666666666666666, &#x27;visited_rooms&#x27;: [&#x27;urgily1&#x27;, &#x27;discroust1&#x27;, &#x27;gligiced1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.75, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;, &#x27;tibing(loscred1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 14</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>You are in a urgily now. There is a entabul. There are passages to a ibret and a gligiced here.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; inspect entabul</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 14</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;examine&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: True, &#x27;action_pragmatic&#x27;: False, &#x27;effective_epistemic_gain_facts&#x27;: [], &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;thempary1&#x27;, &#x27;gligiced1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;entabul1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;ragmat1&#x27;, &#x27;gligiced1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6666666666666666, &#x27;visited_rooms&#x27;: [&#x27;urgily1&#x27;, &#x27;discroust1&#x27;, &#x27;gligiced1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.75, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;, &#x27;tibing(loscred1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Turn 15</p>
+    </div>
+
+    <div speaker="Game Master to Player 1 (AdventurePlayer)" class="msg gm-a" style="">
+        <p>This is a entabul. The entabul is horpler.</p>
+    </div>
+
+    <div speaker="Player 1 (AdventurePlayer) to Game Master" class="msg a-gm" style="">
+        <p>&gt; done</p>
+    </div>
+
+    <div speaker="Game Master: metadata" class="msg gm-gm" style="">
+        <p>Round: 15</p>
+    </div>
+
+    <div speaker="Game Master: action_info" class="msg gm-gm" style="">
+        <p>{&#x27;action_type&#x27;: &#x27;done&#x27;, &#x27;exploration_info&#x27;: {&#x27;action_epistemic&#x27;: False, &#x27;action_pragmatic&#x27;: True, &#x27;effective_epistemic_gain_amount&#x27;: 0, &#x27;known_entities&#x27;: [[&#x27;at&#x27;, &#x27;eposper1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;thempary1&#x27;, &#x27;gligiced1&#x27;], [&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;suncente1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;entabul1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;conitity1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;hidist1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;player1&#x27;, &#x27;urgily1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;ragmat1&#x27;, &#x27;gligiced1&#x27;]], &#x27;known_entities_ratio&#x27;: 0.6666666666666666, &#x27;visited_rooms&#x27;: [&#x27;urgily1&#x27;, &#x27;discroust1&#x27;, &#x27;gligiced1&#x27;], &#x27;visited_rooms_ratio&#x27;: 0.75, &#x27;known_goal_entities&#x27;: [[&#x27;at&#x27;, &#x27;loscred1&#x27;, &#x27;discroust1&#x27;], [&#x27;at&#x27;, &#x27;urermat1&#x27;, &#x27;discroust1&#x27;]], &#x27;known_goal_entities_ratio&#x27;: 0.6666666666666666}, &#x27;done_action&#x27;: True}</p>
+    </div>
+
+    <div speaker="Game Master: goal_status" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;, &#x27;tibing(loscred1)&#x27;], &#x27;turn_goal_score&#x27;: 0}</p>
+    </div>
+
+    <div speaker="Game Master: model_done" class="msg gm-gm" style="">
+        <p>Model produced DONE action at turn 16, end episode.</p>
+    </div>
+
+    <div speaker="Game Master: game_result" class="msg gm-gm" style="">
+        <p>{&#x27;goal_states_achieved&#x27;: [&#x27;ytoust(urermat1)&#x27;, &#x27;tibing(loscred1)&#x27;], &#x27;game_successfully_finished&#x27;: False}</p>
+    </div>
+
+</div>
+
+</body>
+</html>

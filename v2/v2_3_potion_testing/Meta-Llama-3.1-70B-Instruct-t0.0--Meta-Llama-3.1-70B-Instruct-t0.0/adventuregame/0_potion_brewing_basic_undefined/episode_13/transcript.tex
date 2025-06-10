@@ -1,0 +1,3048 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Only reply with an action.\\ \tt For example:\\ \tt > open cupboard\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is to brew a potion following the potion recipe.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a bedroom now. There are a book, a bed, a potion recipe, a wardrobe and a pillow. The book is on the bed. The potion recipe is on the bed. The wardrobe is closed. The pillow is on the floor. There is a passage to a reading room here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take potion recipe 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'potionrecipe1', 'bedroom1'], ['at', 'player1', 'bedroom1']], 'known_entities_ratio': 0.09836065573770492, 'visited_rooms': ['bedroom1'], 'visited_rooms_ratio': 0.08333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You take the potion recipe. In your inventory you have a potion recipe.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > read potion recipe 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'read', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': False, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'potionrecipe1', 'bedroom1'], ['at', 'player1', 'bedroom1']], 'known_entities_ratio': 0.09836065573770492, 'visited_rooms': ['bedroom1'], 'visited_rooms_ratio': 0.08333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You read the potion recipe:\\ \tt Satisfying potion\\ \tt Ingredients: Water, orange, spider, sandwich.\\ \tt 1. Pour water into your cauldron.\\ \tt 2. Drop the sandwich into your cauldron.\\ \tt 3. Drop the spider into your cauldron.\\ \tt 4. Use a ice wand at your cauldron.\\ \tt 5. Wave a fairy wand over your cauldron.\\ \tt 6. Add the orange into your cauldron.\\ \tt \\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to reading room 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'table1', 'readingroom1'], ['exit', 'readingroom1', 'garden1'], ['at', 'chair1', 'readingroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['exit', 'readingroom1', 'conservatory1']], 'effective_epistemic_gain_amount': 9, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'player1', 'readingroom1']], 'known_entities_ratio': 0.18032786885245902, 'visited_rooms': ['readingroom1', 'bedroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a reading room now. There are a side table, a table, a chair, a shelf and a couch. There are passages to a conservatory and a garden here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > examine shelf 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'examine', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': False, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'player1', 'readingroom1']], 'known_entities_ratio': 0.18032786885245902, 'visited_rooms': ['readingroom1', 'bedroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 4 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 This is a shelf. There is nothing on the shelf.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to conservatory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'pricklypear1', 'conservatory1'], ['on', 'pricklypear1', 'conservatory1floor1'], ['exit', 'conservatory1', 'hallway1'], ['at', 'potionrecipe1', 'conservatory1'], ['at', 'player1', 'conservatory1']], 'effective_epistemic_gain_amount': 5, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'pricklypear1', 'conservatory1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'conservatory1'], ['at', 'player1', 'conservatory1']], 'known_entities_ratio': 0.19672131147540983, 'visited_rooms': ['readingroom1', 'bedroom1', 'conservatory1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 5 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a conservatory now. There is a prickly pear. The prickly pear is on the floor. There is a passage to a hallway here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'pricklypear1', 'conservatory1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'conservatory1'], ['at', 'player1', 'conservatory1']], 'known_entities_ratio': 0.19672131147540983, 'visited_rooms': ['readingroom1', 'bedroom1', 'conservatory1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 6 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You take the prickly pear. In your inventory you have a prickly pear and a potion recipe.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to hallway 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'potionrecipe1', 'hallway1'], ['exit', 'hallway1', 'readingroom1'], ['exit', 'hallway1', 'workshop1'], ['at', 'player1', 'hallway1'], ['at', 'pricklypear1', 'hallway1'], ['exit', 'hallway1', 'broomcloset1'], ['exit', 'hallway1', 'bedroom1']], 'effective_epistemic_gain_amount': 7, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'potionrecipe1', 'hallway1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'player1', 'hallway1'], ['at', 'pricklypear1', 'hallway1']], 'known_entities_ratio': 0.19672131147540983, 'visited_rooms': ['hallway1', 'readingroom1', 'bedroom1', 'conservatory1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 7 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a hallway now. There are passages to a magic workshop, a broom closet, a reading room and a bedroom here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to magic workshop 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['on', 'fairywand1', 'workshop1ceiling1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['exit', 'workshop1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['on', 'icewand1', 'workshop1ceiling1'], ['exit', 'workshop1', 'kitchen1'], ['at', 'player1', 'workshop1'], ['at', 'potionrecipe1', 'workshop1'], ['on', 'firewand1', 'workshop1ceiling1'], ['on', 'zulpowand1', 'workshop1ceiling1']], 'effective_epistemic_gain_amount': 13, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 8 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a magic workshop now. There are a zulpo's wand, a ice wand, a fairy wand and a fire wand. The zulpo's wand is on the ceiling. The ice wand is on the ceiling. The fairy wand is on the ceiling. The fire wand is on the ceiling. There are passages to a kitchen and a bedroom here.\\ \tt Magical experiments have reversed and dampened gravity in this room. You begin to float in the air. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take ice wand 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 9 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'prickly', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 10 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'prickly' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 11 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > remove pear from inventory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'remove', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 12 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'remove' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > throw pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'throw', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 13 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'throw' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > let go of pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'let', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 14 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'let' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > release pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'release', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 15 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'release' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put pear down 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'pear', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 16 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'pear' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put prickly pear down 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'down', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 17 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'down' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'prickly', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 18 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'prickly' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'malformed_command', 'arg': "{'type': 'unknown', 'arg1': 'put'}", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 19 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what you mean.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop item from inventory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'item', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 20 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'item' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop one thing 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'one', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 21 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'one' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop something 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 22 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > get rid of something 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'rid of something', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 23 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'rid of something' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take ice wand 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 24 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > discard prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'discard', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 25 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'discard' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > get rid of prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'rid of prickly pear', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 26 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'rid of prickly pear' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > remove something from inventory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'remove', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 27 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'remove' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take potion recipe out of inventory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'taking_from_inventory', 'arg': 'potionrecipe', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 28 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The potion recipe is already in your inventory.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take nothing from inventory 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nothing', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 29 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nothing' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take potion recipe out 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'potion recipe out', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 30 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'potion recipe out' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take potion recipe 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'entity_already_inventory', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'not': {'predicate_tuple': ['in', 'potionrecipe1', 'inventory'], 'fulfilled': True, 'precon_idx': 2}, 'fulfilled': False}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 31 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 The potion recipe is already in your inventory.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take ice wand 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 32 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > leave prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'prickly', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 33 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'prickly' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > leave pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'leave', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 34 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'leave' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put pear away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'pear', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 35 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'pear' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put something away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'something', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 36 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'something' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put an object away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'object', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 37 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'object' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put one thing away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'one thing', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 38 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'one thing' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put a thing away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'thing', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 39 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'thing' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put it away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'it', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 40 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'it' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put the other thing away 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'other thing', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 41 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'other thing' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > take ice wand 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 42 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put the prickly pear on the floor 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'put', 'failed_precon_predicate': {'predicate_tuple': ['at', 'broomcloset1floor1', 'workshop1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 43 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't see a floor here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put the prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'prickly', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 44 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'prickly' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put the pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'the', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 45 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'the' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'malformed_command', 'arg': "{'type': 'unknown', 'arg1': 'put'}", 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 46 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what you mean.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put prickly pear 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'prickly', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 47 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'prickly' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put pear somewhere 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'pear', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 48 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'pear' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put something somewhere 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'something', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 49 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'something' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put an item somewhere 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'item', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'book1', 'bedroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'firewand1', 'workshop1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'player1', 'workshop1']], 'known_entities_ratio': 0.26229508196721313, 'visited_rooms': ['bedroom1', 'conservatory1', 'workshop1', 'hallway1', 'readingroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn limit 50 reached, end episode. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'game_successfully_finished': False} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

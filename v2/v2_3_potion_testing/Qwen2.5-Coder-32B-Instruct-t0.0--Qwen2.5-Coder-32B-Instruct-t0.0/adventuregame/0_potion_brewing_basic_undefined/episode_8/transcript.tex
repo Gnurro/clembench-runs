@@ -1,0 +1,2148 @@
+
+\documentclass{article}
+\usepackage{colortbl}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{supertabular}
+
+\begin{document}
+
+\newcounter{utterance}
+
+\twocolumn
+
+{ \footnotesize  \setcounter{utterance}{1}
+\setlength{\tabcolsep}{0pt}
+\begin{supertabular}{c@{$\;$}|p{.15\linewidth}@{}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}p{.15\linewidth}}
+
+    \# & $\;$A & \multicolumn{4}{c}{Game Master} & $\;\:$B\\
+    \hline 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 0 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Only reply with an action.\\ \tt For example:\\ \tt > open cupboard\\ \tt \\ \tt You can have up to two objects in your inventory at the same time.\\ \tt \\ \tt Your goal for this game is to brew a potion following the potion recipe.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a bedroom now. There are a book, a wardrobe, a bed, a potion recipe and a pillow. The book is on the bed. The wardrobe is closed. The potion recipe is on the bed. The pillow is on the floor. There is a passage to a reading room here. 
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > pick up potion recipe 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'bedroom1'], ['at', 'potionrecipe1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1']], 'known_entities_ratio': 0.09836065573770492, 'visited_rooms': ['bedroom1'], 'visited_rooms_ratio': 0.08333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 1 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You take the potion recipe. In your inventory you have a potion recipe.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to reading room 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'shelf1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['exit', 'readingroom1', 'garden1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['exit', 'readingroom1', 'conservatory1'], ['at', 'sidetable1', 'readingroom1']], 'effective_epistemic_gain_amount': 9, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1']], 'known_entities_ratio': 0.18032786885245902, 'visited_rooms': ['readingroom1', 'bedroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 2 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a reading room now. There are a chair, a table, a shelf, a couch and a side table. There are passages to a garden and a conservatory here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['on', 'lilyofthevalley1', 'garden1floor1'], ['exit', 'garden1', 'outhouse1'], ['at', 'nightshade1', 'garden1'], ['at', 'potionrecipe1', 'garden1'], ['at', 'player1', 'garden1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'lilyofthevalley1', 'garden1'], ['on', 'plasmbucket1', 'garden1floor1'], ['on', 'waterbucket1', 'garden1floor1'], ['exit', 'garden1', 'storage1'], ['on', 'nightshade1', 'garden1floor1']], 'effective_epistemic_gain_amount': 12, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'nightshade1', 'garden1'], ['at', 'potionrecipe1', 'garden1'], ['at', 'player1', 'garden1'], ['at', 'couch1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'table1', 'readingroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1']], 'known_entities_ratio': 0.2459016393442623, 'visited_rooms': ['garden1', 'readingroom1', 'bedroom1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 3 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a garden now. There are a bucket of ectoplasm, a nightshade, a lily of the valley and a bucket of water. The bucket of ectoplasm is on the floor. The nightshade is on the floor. The lily of the valley is on the floor. The bucket of water is on the floor. There are passages to a outhouse and a storage room here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > pick up nightshade 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'nightshade1', 'garden1'], ['at', 'potionrecipe1', 'garden1'], ['at', 'player1', 'garden1'], ['at', 'couch1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'table1', 'readingroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1']], 'known_entities_ratio': 0.2459016393442623, 'visited_rooms': ['garden1', 'readingroom1', 'bedroom1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 4 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You take the nightshade. In your inventory you have a nightshade and a potion recipe.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > go to storage room 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['on', 'whisk1', 'storage1floor1'], ['on', 'spoon1', 'storage1floor1'], ['exit', 'storage1', 'cellar1'], ['on', 'borpulus1', 'storage1floor1'], ['on', 'ladle1', 'storage1floor1'], ['on', 'plonklecrystal1', 'storage1floor1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['exit', 'storage1', 'hallway1'], ['at', 'spiderweb1', 'storage1'], ['on', 'spiderweb1', 'storage1floor1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['on', 'plinklecrystal1', 'storage1floor1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['on', 'plunklecrystal1', 'storage1floor1']], 'effective_epistemic_gain_amount': 21, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 5 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You are in a storage room now. There are a whisk, a plonkle crystal, a borpulus, a spoon, a ladle, a plunkle crystal, a plinkle crystal and a spiderweb. The whisk is on the floor. The plonkle crystal is on the floor. The borpulus is on the floor. The spoon is on the floor. The ladle is on the floor. The plunkle crystal is on the floor. The plinkle crystal is on the floor. The spiderweb is on the floor. There are passages to a hallway and a cellar here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > pick up plonkle crystal 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 6 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop nightshade 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 7 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put down nightshade 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'down', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 8 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'down' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > drop nightshade 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 9 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'drop' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > leave nightshade 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_action_verb', 'arg': 'leave', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 10 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know how to interpret this 'leave' action.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on floor 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'put', 'failed_precon_predicate': {'predicate_tuple': ['at', 'outhouse1floor1', 'storage1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 11 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't see a floor here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on ground 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 12 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the floor 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'put', 'failed_precon_predicate': {'predicate_tuple': ['at', 'outhouse1floor1', 'storage1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 13 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't see a floor here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 14 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the floor here 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'floor here', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 15 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'floor here' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the floor of the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'floor of the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 16 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'floor of the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground here 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground here', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 17 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground here' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground in the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 18 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground in the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 19 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the floor of the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'floor of the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 20 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'floor of the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the floor 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'put', 'failed_precon_predicate': {'predicate_tuple': ['at', 'outhouse1floor1', 'storage1'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 21 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 You can't see a floor here.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 22 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the floor of the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'floor of the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 23 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'floor of the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground in the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 24 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground in the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground here 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground here', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 25 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground here' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the current location 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 26 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nightshade on the ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground in the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 27 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground in the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the current area 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 28 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nightshade on the ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground here 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground here', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 29 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground here' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden area 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 30 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nightshade on the ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'ground in the garden', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 31 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'ground in the garden' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden area 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 32 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nightshade on the ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden area 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 33 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nightshade on the ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden area 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Turn 34 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\langle$GM]}  
+	 I don't know what 'nightshade on the ground' means.\\ \tt  
+	  } 
+	   } 
+	   } 
+	 & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [A$\rangle$GM]}  
+	 > put nightshade on the ground in the garden area 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'phase': 'parsing', 'fail_type': 'undefined_repr_str', 'arg': 'nightshade on the ground', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': False, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'plasmbucket1', 'garden1'], ['at', 'waterbucket1', 'garden1'], ['at', 'player1', 'storage1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'spiderweb1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'whisk1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'ladle1', 'storage1'], ['at', 'table1', 'readingroom1'], ['at', 'spoon1', 'storage1'], ['at', 'plonklecrystal1', 'storage1']], 'known_entities_ratio': 0.3770491803278688, 'visited_rooms': ['garden1', 'readingroom1', 'storage1', 'bedroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'turn_goal_score': 0} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 Model produced IF input 'put nightshade on the ground in the garden area' four times consecutively, abort episode. 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+    \theutterance \stepcounter{utterance}  
+
+    & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
+	\makecell[{{p{\linewidth}}}]{% 
+	  \tt {\tiny [GM$|$GM]}  
+	 {'goal_states_achieved': [], 'game_successfully_finished': False} 
+	  } 
+	   } 
+	   } 
+	 & & \\ 
+ 
+
+\end{supertabular}
+}
+
+\end{document}

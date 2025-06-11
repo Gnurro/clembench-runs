@@ -35,7 +35,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Only reply with an action.\\ \tt For example:\\ \tt > open cupboard\\ \tt \\ \tt Your goal for this game is to brew a potion following the potion recipe.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a bedroom now. There are a bed, a potion recipe, a pillow, a wardrobe and a book. The potion recipe is on the bed. The pillow is on the floor. The wardrobe is closed. The book is on the bed. There is a passage to a reading room here. 
+	 You are playing a text adventure game. I will describe what you can perceive in the game. You write the single action you want to take in the game starting with >. Only reply with an action.\\ \tt For example:\\ \tt > open cupboard\\ \tt \\ \tt Your goal for this game is to brew a potion following the potion recipe.\\ \tt \\ \tt Once you have achieved your goal, write "> done" to end the game.\\ \tt \\ \tt You are in a bedroom now. There are a wardrobe, a potion recipe, a book, a bed and a pillow. The wardrobe is closed. The potion recipe is on the bed. The book is on the bed. The pillow is on the floor. There is a passage to a reading room here. 
 	  } 
 	   } 
 	   } 
@@ -59,7 +59,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'wardrobe1', 'bedroom1'], ['at', 'potionrecipe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'player1', 'bedroom1'], ['at', 'book1', 'bedroom1'], ['at', 'bed1', 'bedroom1']], 'known_entities_ratio': 0.08823529411764706, 'visited_rooms': ['bedroom1'], 'visited_rooms_ratio': 0.08333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'player1', 'bedroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.08823529411764706, 'visited_rooms': ['bedroom1'], 'visited_rooms_ratio': 0.08333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -119,7 +119,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['exit', 'readingroom1', 'conservatory1'], ['exit', 'readingroom1', 'garden1'], ['at', 'chair1', 'readingroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1']], 'effective_epistemic_gain_amount': 9, 'known_entities': [['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1']], 'known_entities_ratio': 0.16176470588235295, 'visited_rooms': ['bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['exit', 'readingroom1', 'conservatory1'], ['exit', 'readingroom1', 'garden1'], ['at', 'shelf1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'player1', 'readingroom1']], 'effective_epistemic_gain_amount': 9, 'known_entities': [['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'potionrecipe1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.16176470588235295, 'visited_rooms': ['bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -167,7 +167,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > examine shelf 
+	 > go to conservatory 
 	  } 
 	   } 
 	   } 
@@ -179,7 +179,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'examine', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': False, 'effective_epistemic_gain_facts': [], 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'player1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'potionrecipe1', 'readingroom1']], 'known_entities_ratio': 0.16176470588235295, 'visited_rooms': ['bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.16666666666666666, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'potionrecipe1', 'conservatory1'], ['on', 'pricklypear1', 'conservatory1floor1'], ['at', 'player1', 'conservatory1'], ['at', 'pricklypear1', 'conservatory1'], ['exit', 'conservatory1', 'hallway1'], ['at', 'plantingtable1', 'conservatory1']], 'effective_epistemic_gain_amount': 6, 'known_entities': [['at', 'sidetable1', 'readingroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'conservatory1'], ['at', 'shelf1', 'readingroom1'], ['at', 'player1', 'conservatory1'], ['at', 'pillow1', 'bedroom1'], ['at', 'pricklypear1', 'conservatory1'], ['at', 'bed1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'table1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.19117647058823528, 'visited_rooms': ['bedroom1', 'conservatory1', 'readingroom1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -215,7 +215,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 This is a shelf. There is nothing on the shelf.\\ \tt  
+	 You are in a conservatory now. There are a planting table and a prickly pear. The prickly pear is on the floor. There is a passage to a hallway here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -227,7 +227,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > go to garden 
+	 > pick up prickly pear 
 	  } 
 	   } 
 	   } 
@@ -239,7 +239,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'potionrecipe1', 'garden1'], ['at', 'lilyofthevalley1', 'garden1'], ['on', 'lilyofthevalley1', 'garden1floor1'], ['at', 'player1', 'garden1'], ['on', 'waterbucket1', 'garden1floor1'], ['at', 'gardenbench1', 'garden1'], ['on', 'nightshade1', 'garden1floor1'], ['at', 'waterbucket1', 'garden1'], ['at', 'nightshade1', 'garden1'], ['exit', 'garden1', 'outhouse1'], ['exit', 'garden1', 'storage1']], 'effective_epistemic_gain_amount': 11, 'known_entities': [['at', 'potionrecipe1', 'garden1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'player1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'gardenbench1', 'garden1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'chair1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'nightshade1', 'garden1'], ['at', 'table1', 'readingroom1'], ['at', 'bed1', 'bedroom1']], 'known_entities_ratio': 0.22058823529411764, 'visited_rooms': ['garden1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plantingtable1', 'conservatory1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'conservatory1'], ['at', 'shelf1', 'readingroom1'], ['at', 'player1', 'conservatory1'], ['at', 'pillow1', 'bedroom1'], ['at', 'pricklypear1', 'conservatory1'], ['at', 'bed1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.19117647058823528, 'visited_rooms': ['bedroom1', 'conservatory1', 'readingroom1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -275,7 +275,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You are in a garden now. There are a nightshade, a bucket of water, a lily of the valley and a garden bench. The nightshade is on the floor. The bucket of water is on the floor. The lily of the valley is on the floor. There are passages to a storage room and a outhouse here.\\ \tt  
+	 You take the prickly pear. In your inventory you have a potion recipe and a prickly pear.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -287,7 +287,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > go to hallway 
 	  } 
 	   } 
 	   } 
@@ -299,7 +299,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'garden1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'player1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'gardenbench1', 'garden1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'chair1', 'readingroom1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'nightshade1', 'garden1'], ['at', 'table1', 'readingroom1'], ['at', 'bed1', 'bedroom1']], 'known_entities_ratio': 0.22058823529411764, 'visited_rooms': ['garden1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.25, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['exit', 'hallway1', 'readingroom1'], ['exit', 'hallway1', 'workshop1'], ['exit', 'hallway1', 'broomcloset1'], ['at', 'player1', 'hallway1'], ['at', 'potionrecipe1', 'hallway1'], ['at', 'pricklypear1', 'hallway1'], ['exit', 'hallway1', 'bedroom1']], 'effective_epistemic_gain_amount': 7, 'known_entities': [['at', 'sidetable1', 'readingroom1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'book1', 'bedroom1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'hallway1'], ['at', 'shelf1', 'readingroom1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'pricklypear1', 'hallway1'], ['at', 'table1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'player1', 'hallway1']], 'known_entities_ratio': 0.19117647058823528, 'visited_rooms': ['hallway1', 'bedroom1', 'conservatory1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -335,7 +335,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You take the nightshade. In your inventory you have a potion recipe and a nightshade.\\ \tt  
+	 You are in a hallway now. There are passages to a broom closet, a magic workshop, a bedroom and a reading room here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -347,7 +347,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > go to storage room 
+	 > go to magic workshop 
 	  } 
 	   } 
 	   } 
@@ -359,7 +359,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['on', 'plunklecrystal1', 'storage1floor1'], ['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['on', 'spoon1', 'storage1floor1'], ['on', 'plinklecrystal1', 'storage1floor1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['on', 'plonklecrystal1', 'storage1floor1'], ['on', 'whisk1', 'storage1floor1'], ['at', 'spoon1', 'storage1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['exit', 'storage1', 'cellar1'], ['on', 'ladle1', 'storage1floor1'], ['at', 'whisk1', 'storage1'], ['on', 'borpulus1', 'storage1floor1'], ['at', 'ladle1', 'storage1'], ['exit', 'storage1', 'hallway1']], 'effective_epistemic_gain_amount': 20, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['on', 'firewand1', 'workshop1ceiling1'], ['on', 'icewand1', 'workshop1ceiling1'], ['at', 'zulpowand1', 'workshop1'], ['exit', 'workshop1', 'bedroom1'], ['on', 'fairywand1', 'workshop1ceiling1'], ['at', 'fairywand1', 'workshop1'], ['at', 'potionrecipe1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'player1', 'workshop1'], ['on', 'zulpowand1', 'workshop1ceiling1'], ['at', 'icewand1', 'workshop1'], ['at', 'orrery1', 'workshop1'], ['exit', 'workshop1', 'kitchen1'], ['at', 'workbench1', 'workshop1'], ['at', 'pricklypear1', 'workshop1']], 'effective_epistemic_gain_amount': 15, 'known_entities': [['at', 'potionrecipe1', 'workshop1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'player1', 'workshop1'], ['at', 'chair1', 'readingroom1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.27941176470588236, 'visited_rooms': ['workshop1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -395,7 +395,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You are in a storage room now. There are a whisk, a plonkle crystal, a ladle, a plunkle crystal, a spoon, a crate, a borpulus and a plinkle crystal. The whisk is on the floor. The plonkle crystal is on the floor. The ladle is on the floor. The plunkle crystal is on the floor. The spoon is on the floor. The borpulus is on the floor. The plinkle crystal is on the floor. There are passages to a hallway and a cellar here.\\ \tt  
+	 You are in a magic workshop now. There are a fairy wand, a workbench, a fire wand, a zulpowand, a ice wand and a orrery. The fairy wand is on the ceiling. The fire wand is on the ceiling. The zulpowand is on the ceiling. The ice wand is on the ceiling. There are passages to a bedroom and a kitchen here.\\ \tt Magical experiments have reversed and dampened gravity in this room. You begin to float in the air. 
 	  } 
 	   } 
 	   } 
@@ -407,7 +407,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > grab ice wand 
 	  } 
 	   } 
 	   } 
@@ -419,7 +419,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'workshop1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'player1', 'workshop1'], ['at', 'chair1', 'readingroom1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.27941176470588236, 'visited_rooms': ['workshop1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -467,7 +467,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > drop prickly pear 
 	  } 
 	   } 
 	   } 
@@ -479,7 +479,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'workshop1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'player1', 'workshop1'], ['at', 'chair1', 'readingroom1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.27941176470588236, 'visited_rooms': ['workshop1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -515,7 +515,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You drop the nightshade on the floor.\\ \tt  
+	 You drop the prickly pear on the floor.\\ \tt The prickly pear floats up to the ceiling. 
 	  } 
 	   } 
 	   } 
@@ -527,7 +527,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > grab ice wand 
 	  } 
 	   } 
 	   } 
@@ -539,7 +539,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'workshop1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'player1', 'workshop1'], ['at', 'chair1', 'readingroom1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'icewand1', 'workshop1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.27941176470588236, 'visited_rooms': ['workshop1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.4166666666666667, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -575,7 +575,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You take the ice wand. In your inventory you have a potion recipe and a ice wand.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -587,7 +587,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > go to kitchen 
 	  } 
 	   } 
 	   } 
@@ -599,7 +599,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'icewand1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['exit', 'kitchen1', 'conservatory1'], ['exit', 'kitchen1', 'pantry1'], ['on', 'plate1', 'kitchen1floor1'], ['at', 'counter1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['on', 'cauldron1', 'kitchen1floor1'], ['closed', 'cupboard1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'cupboard1', 'kitchen1']], 'effective_epistemic_gain_amount': 12, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'orrery1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'workbench1', 'workshop1'], ['at', 'player1', 'kitchen1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.5, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -635,7 +635,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a kitchen now. There are a plate, a cauldron, a cupboard and a counter. The plate is on the floor. The cauldron is on the floor. The cupboard is closed. There are passages to a conservatory and a pantry here.\\ \tt Gravity behaves normally in this room. You stop floating in the air. 
 	  } 
 	   } 
 	   } 
@@ -647,7 +647,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -659,7 +659,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'orrery1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'workbench1', 'workshop1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'player1', 'kitchen1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.5, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -695,7 +695,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -707,7 +707,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > drop ice wand 
 	  } 
 	   } 
 	   } 
@@ -719,7 +719,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'orrery1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'workbench1', 'workshop1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'player1', 'kitchen1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.5, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -755,7 +755,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You drop the ice wand on the floor.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -767,7 +767,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -779,7 +779,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'take', 'failed_parameter': 'cauldron'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'orrery1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'workbench1', 'workshop1'], ['at', 'player1', 'kitchen1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'bedroom1'], 'visited_rooms_ratio': 0.5, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -815,7 +815,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Cauldron is not takeable.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -827,7 +827,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > go to pantry 
 	  } 
 	   } 
 	   } 
@@ -839,7 +839,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'pantry1'], ['in', 'banana1', 'icebox1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['closed', 'icebox1'], ['in', 'peach1', 'icebox1'], ['in', 'toad1', 'icebox1'], ['at', 'icebox1', 'pantry1'], ['exit', 'pantry1', 'kitchen1'], ['at', 'apple1', 'pantry1'], ['at', 'eyeofnewt1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1'], ['in', 'apple1', 'icebox1'], ['at', 'orange1', 'pantry1'], ['at', 'sandwich1', 'pantry1'], ['in', 'orange1', 'icebox1'], ['at', 'banana1', 'pantry1'], ['on', 'eyeofnewt1', 'pantry1floor1'], ['in', 'sandwich1', 'icebox1']], 'effective_epistemic_gain_amount': 20, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'workbench1', 'workshop1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'eyeofnewt1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -875,7 +875,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a pantry now. There are a ingredient rack, a peach, a sandwich, a toad, a orange, a ice box, a apple, a eye of newt and a banana. The peach is in the ice box. The sandwich is in the ice box. The toad is in the ice box. The orange is in the ice box. The ice box is closed. The apple is in the ice box. The eye of newt is on the floor. The banana is in the ice box. There is a passage to a kitchen here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -887,7 +887,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up eye of newt 
 	  } 
 	   } 
 	   } 
@@ -899,7 +899,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'eyeofnewt1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -935,7 +935,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You take the eye of newt. In your inventory you have a potion recipe and a eye of newt.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -947,7 +947,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > go to kitchen 
 	  } 
 	   } 
 	   } 
@@ -959,7 +959,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'eyeofnewt1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'potionrecipe1', 'kitchen1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -995,7 +995,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a kitchen now. There are a plate, a cauldron, a cupboard, a ice wand and a counter. The plate is on the floor. The cauldron is on the floor. The cupboard is closed. The ice wand is on the floor. There are passages to a conservatory and a pantry here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1007,7 +1007,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -1019,7 +1019,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1055,7 +1055,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1067,7 +1067,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > drop eye of newt 
 	  } 
 	   } 
 	   } 
@@ -1079,7 +1079,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1115,7 +1115,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You drop the eye of newt on the floor.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1127,7 +1127,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -1139,7 +1139,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'take', 'failed_parameter': 'cauldron'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1175,7 +1175,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Cauldron is not takeable.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1187,7 +1187,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > go to pantry 
 	  } 
 	   } 
 	   } 
@@ -1199,7 +1199,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1']], 'effective_epistemic_gain_amount': 2, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1235,7 +1235,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a pantry now. There are a ingredient rack, a peach, a sandwich, a toad, a orange, a ice box, a apple and a banana. The peach is in the ice box. The sandwich is in the ice box. The toad is in the ice box. The orange is in the ice box. The ice box is closed. The apple is in the ice box. The banana is in the ice box. There is a passage to a kitchen here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1247,7 +1247,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up eye of newt 
 	  } 
 	   } 
 	   } 
@@ -1259,7 +1259,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['at', 'eyeofnewt1', 'pantry1'], 'fulfilled': False, 'precon_idx': 1}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1295,7 +1295,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You can't see a eye of newt here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1307,7 +1307,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > open ice box 
 	  } 
 	   } 
 	   } 
@@ -1319,7 +1319,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'open', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['open', 'icebox1']], 'effective_epistemic_gain_amount': 1, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1355,7 +1355,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 The ice box is now open. In the ice box there are a apple, a banana, a peach, a sandwich, a toad and a orange.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1367,7 +1367,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up apple 
 	  } 
 	   } 
 	   } 
@@ -1379,7 +1379,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'apple1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1415,7 +1415,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You take the apple. In your inventory you have a potion recipe and a apple.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1427,7 +1427,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > go to kitchen 
 	  } 
 	   } 
 	   } 
@@ -1439,7 +1439,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'apple1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'potionrecipe1', 'kitchen1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1475,7 +1475,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a kitchen now. There are a plate, a eye of newt, a cauldron, a cupboard, a ice wand and a counter. The plate is on the floor. The eye of newt is on the floor. The cauldron is on the floor. The cupboard is closed. The ice wand is on the floor. There are passages to a conservatory and a pantry here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1487,7 +1487,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -1499,7 +1499,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1535,7 +1535,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1547,7 +1547,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > drop apple 
 	  } 
 	   } 
 	   } 
@@ -1559,7 +1559,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1595,7 +1595,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You drop the apple on the floor.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1607,7 +1607,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -1619,7 +1619,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'take', 'failed_parameter': 'cauldron'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1655,7 +1655,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Cauldron is not takeable.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1667,7 +1667,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > go to pantry 
 	  } 
 	   } 
 	   } 
@@ -1679,7 +1679,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1']], 'effective_epistemic_gain_amount': 2, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1715,7 +1715,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a pantry now. There are a ingredient rack, a peach, a sandwich, a toad, a orange, a ice box and a banana. The peach is in the ice box. The sandwich is in the ice box. The toad is in the ice box. The orange is in the ice box. The ice box is open. The banana is in the ice box. There is a passage to a kitchen here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1727,7 +1727,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up apple 
 	  } 
 	   } 
 	   } 
@@ -1739,7 +1739,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['at', 'apple1', 'pantry1'], 'fulfilled': False, 'precon_idx': 1}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1775,7 +1775,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You can't see a apple here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1787,7 +1787,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > pick up peach 
 	  } 
 	   } 
 	   } 
@@ -1799,7 +1799,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'peach1', 'pantry1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1835,7 +1835,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You take the peach. In your inventory you have a peach and a potion recipe.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1847,7 +1847,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > go to kitchen 
 	  } 
 	   } 
 	   } 
@@ -1859,7 +1859,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'kitchen1'], ['at', 'peach1', 'kitchen1'], ['at', 'potionrecipe1', 'kitchen1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1895,7 +1895,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You are in a kitchen now. There are a apple, a plate, a eye of newt, a cauldron, a cupboard, a ice wand and a counter. The apple is on the floor. The plate is on the floor. The eye of newt is on the floor. The cauldron is on the floor. The cupboard is closed. The ice wand is on the floor. There are passages to a conservatory and a pantry here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -1907,7 +1907,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -1919,7 +1919,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -1967,7 +1967,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > drop peach 
 	  } 
 	   } 
 	   } 
@@ -1979,7 +1979,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2015,7 +2015,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You drop the peach on the floor.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2027,7 +2027,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -2039,7 +2039,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'take', 'failed_parameter': 'cauldron'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2075,7 +2075,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 Cauldron is not takeable.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2087,7 +2087,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > go to pantry 
 	  } 
 	   } 
 	   } 
@@ -2099,7 +2099,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1']], 'effective_epistemic_gain_amount': 2, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2135,7 +2135,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You are in a pantry now. There are a ingredient rack, a sandwich, a toad, a orange, a ice box and a banana. The sandwich is in the ice box. The toad is in the ice box. The orange is in the ice box. The ice box is open. The banana is in the ice box. There is a passage to a kitchen here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2147,7 +2147,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > pick up peach 
 	  } 
 	   } 
 	   } 
@@ -2159,7 +2159,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['at', 'peach1', 'pantry1'], 'fulfilled': False, 'precon_idx': 1}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2195,7 +2195,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You can't see a peach here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2207,7 +2207,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up orange 
 	  } 
 	   } 
 	   } 
@@ -2219,7 +2219,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'orange1', 'pantry1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2255,7 +2255,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You take the orange. In your inventory you have a potion recipe and a orange.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2267,7 +2267,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > go to kitchen 
 	  } 
 	   } 
 	   } 
@@ -2279,7 +2279,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'orange1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'potionrecipe1', 'kitchen1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2315,7 +2315,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a kitchen now. There are a apple, a plate, a eye of newt, a cauldron, a cupboard, a peach, a ice wand and a counter. The apple is on the floor. The plate is on the floor. The eye of newt is on the floor. The cauldron is on the floor. The cupboard is closed. The peach is on the floor. The ice wand is on the floor. There are passages to a conservatory and a pantry here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2327,7 +2327,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -2339,7 +2339,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2375,7 +2375,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Your inventory can not hold more than two objects at the same time.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2387,7 +2387,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > drop orange 
 	  } 
 	   } 
 	   } 
@@ -2399,7 +2399,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2435,7 +2435,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You drop the orange on the floor.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2447,7 +2447,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -2459,7 +2459,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'take', 'failed_parameter': 'cauldron'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2495,7 +2495,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 Cauldron is not takeable.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2507,7 +2507,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > go to pantry 
 	  } 
 	   } 
 	   } 
@@ -2519,7 +2519,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1']], 'effective_epistemic_gain_amount': 2, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2555,7 +2555,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You are in a pantry now. There are a ingredient rack, a sandwich, a toad, a ice box and a banana. The sandwich is in the ice box. The toad is in the ice box. The ice box is open. The banana is in the ice box. There is a passage to a kitchen here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2567,7 +2567,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > pick up orange 
 	  } 
 	   } 
 	   } 
@@ -2579,7 +2579,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['at', 'orange1', 'pantry1'], 'fulfilled': False, 'precon_idx': 1}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2615,7 +2615,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You can't see a orange here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2627,7 +2627,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > pick up banana 
 	  } 
 	   } 
 	   } 
@@ -2639,7 +2639,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'take', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'banana1', 'pantry1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2675,7 +2675,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 You take the banana. In your inventory you have a banana and a potion recipe.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2687,7 +2687,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > go to kitchen 
 	  } 
 	   } 
 	   } 
@@ -2699,7 +2699,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'banana1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'potionrecipe1', 'kitchen1']], 'effective_epistemic_gain_amount': 3, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'banana1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2735,7 +2735,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You are in a kitchen now. There are a apple, a plate, a eye of newt, a cauldron, a cupboard, a peach, a ice wand, a orange and a counter. The apple is on the floor. The plate is on the floor. The eye of newt is on the floor. The cauldron is on the floor. The cupboard is closed. The peach is on the floor. The ice wand is on the floor. The orange is on the floor. There are passages to a conservatory and a pantry here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2747,7 +2747,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -2759,7 +2759,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'banana1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2807,7 +2807,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop plonkle crystal 
+	 > drop banana 
 	  } 
 	   } 
 	   } 
@@ -2819,7 +2819,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'plonklecrystal1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'drop', 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'banana1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2855,7 +2855,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You drop the banana on the floor.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2867,7 +2867,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up plonkle crystal 
+	 > pick up cauldron 
 	  } 
 	   } 
 	   } 
@@ -2879,7 +2879,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'domain_trait_type_mismatch', 'arg': {'failed_action_type': 'take', 'failed_parameter': 'cauldron'}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'banana1', 'kitchen1'], ['at', 'player1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'potionrecipe1', 'kitchen1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2915,7 +2915,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 Your inventory can not hold more than two objects at the same time.\\ \tt  
+	 Cauldron is not takeable.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2927,7 +2927,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > drop nightshade 
+	 > go to pantry 
 	  } 
 	   } 
 	   } 
@@ -2939,7 +2939,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'drop', 'failed_precon_predicate': {'predicate_tuple': ['in', 'nightshade1', 'inventory'], 'fulfilled': False, 'precon_idx': 2}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'action_type': 'go', 'exploration_info': {'action_epistemic': True, 'action_pragmatic': True, 'effective_epistemic_gain_facts': [['at', 'player1', 'pantry1'], ['at', 'potionrecipe1', 'pantry1']], 'effective_epistemic_gain_amount': 2, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'banana1', 'kitchen1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
@@ -2975,7 +2975,7 @@
     & & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.9,0.9,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\langle$GM]}  
-	 You don't have a  in your inventory.\\ \tt  
+	 You are in a pantry now. There are a ingredient rack, a sandwich, a toad and a ice box. The sandwich is in the ice box. The toad is in the ice box. The ice box is open. There is a passage to a kitchen here.\\ \tt  
 	  } 
 	   } 
 	   } 
@@ -2987,7 +2987,7 @@
     & \multicolumn{4}{p{0.6\linewidth}}{\cellcolor[rgb]{0.8,1,0.9}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [A$\rangle$GM]}  
-	 > pick up nightshade 
+	 > pick up banana 
 	  } 
 	   } 
 	   } 
@@ -2999,7 +2999,7 @@
     & & & \multicolumn{2}{p{0.3\linewidth}}{\cellcolor[rgb]{0.95,0.95,0.95}{%
 	\makecell[{{p{\linewidth}}}]{% 
 	  \tt {\tiny [GM$|$GM]}  
-	 {'phase': 'resolution', 'fail_type': 'inventory_limit_exceeded', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['itemcount', 'inventory', 2], 'fulfilled': False, 'precon_idx': 5}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'potionrecipe1', 'storage1'], ['at', 'borpulus1', 'storage1'], ['at', 'pillow1', 'bedroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'couch1', 'readingroom1'], ['at', 'waterbucket1', 'garden1'], ['at', 'plinklecrystal1', 'storage1'], ['at', 'plunklecrystal1', 'storage1'], ['at', 'player1', 'storage1'], ['at', 'gardenbench1', 'garden1'], ['at', 'spoon1', 'storage1'], ['at', 'book1', 'bedroom1'], ['at', 'shelf1', 'readingroom1'], ['at', 'crate1', 'storage1'], ['at', 'plonklecrystal1', 'storage1'], ['at', 'nightshade1', 'storage1'], ['at', 'bed1', 'bedroom1'], ['at', 'whisk1', 'storage1'], ['at', 'chair1', 'readingroom1'], ['at', 'table1', 'readingroom1'], ['at', 'lilyofthevalley1', 'garden1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'ladle1', 'storage1']], 'known_entities_ratio': 0.3382352941176471, 'visited_rooms': ['garden1', 'storage1', 'bedroom1', 'readingroom1'], 'visited_rooms_ratio': 0.3333333333333333, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
+	 {'phase': 'resolution', 'fail_type': 'entity_not_accessible', 'arg': {'failed_action_type': 'take', 'failed_precon_predicate': {'predicate_tuple': ['at', 'banana1', 'pantry1'], 'fulfilled': False, 'precon_idx': 1}}, 'exploration_info': {'action_epistemic': False, 'action_pragmatic': True, 'effective_epistemic_gain_amount': 0, 'known_entities': [['at', 'player1', 'pantry1'], ['at', 'orange1', 'kitchen1'], ['at', 'plate1', 'kitchen1'], ['at', 'ingredientrack1', 'pantry1'], ['at', 'orrery1', 'workshop1'], ['at', 'workbench1', 'workshop1'], ['at', 'banana1', 'kitchen1'], ['at', 'cauldron1', 'kitchen1'], ['at', 'toad1', 'pantry1'], ['at', 'fairywand1', 'workshop1'], ['at', 'firewand1', 'workshop1'], ['at', 'pillow1', 'bedroom1'], ['at', 'bed1', 'bedroom1'], ['at', 'pricklypear1', 'workshop1'], ['at', 'table1', 'readingroom1'], ['at', 'cupboard1', 'kitchen1'], ['at', 'icebox1', 'pantry1'], ['at', 'peach1', 'kitchen1'], ['at', 'chair1', 'readingroom1'], ['at', 'potionrecipe1', 'pantry1'], ['at', 'icewand1', 'kitchen1'], ['at', 'zulpowand1', 'workshop1'], ['at', 'plantingtable1', 'conservatory1'], ['at', 'sandwich1', 'pantry1'], ['at', 'apple1', 'kitchen1'], ['at', 'counter1', 'kitchen1'], ['at', 'shelf1', 'readingroom1'], ['at', 'eyeofnewt1', 'kitchen1'], ['at', 'couch1', 'readingroom1'], ['at', 'sidetable1', 'readingroom1'], ['at', 'wardrobe1', 'bedroom1'], ['at', 'book1', 'bedroom1']], 'known_entities_ratio': 0.47058823529411764, 'visited_rooms': ['workshop1', 'kitchen1', 'readingroom1', 'conservatory1', 'hallway1', 'pantry1', 'bedroom1'], 'visited_rooms_ratio': 0.5833333333333334, 'known_goal_entities': [], 'known_goal_entities_ratio': 0.0}} 
 	  } 
 	   } 
 	   } 
